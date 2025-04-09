@@ -1,0 +1,51 @@
+{
+    "title": "Lesson 2: Presentaciones",
+    "avatarScript": "¡Bienvenido a la segunda clase! Hoy aprenderás cómo presentarte y preguntar el nombre de otra persona en inglés. Recuerda: yo te hablaré en español para explicar, pero las frases importantes estarán en inglés. Repite después de mí y practica con confianza.",
+    "dialog": [
+      {
+        "text": "Vamos a comenzar aprendiendo a decir nuestro nombre. En inglés, se dice: My name is... seguido de tu nombre. Por ejemplo: My name is John. Repite: My name is John.",
+        "expectedResponse": "My name is John"
+      },
+      {
+        "text": "Muy bien. Repite de nuevo: My name is John.",
+        "expectedResponse": "My name is John"
+      },
+      {
+        "text": "Ahora vamos a aprender a preguntar el nombre de otra persona. En inglés, se dice: What's your name? Escucha con atención: What's your name?",
+        "expectedResponse": "What's your name?"
+      },
+      {
+        "text": "Perfecto. Ahora repítelo tú por favor, tu puedes: What's your name?",
+        "expectedResponse": "What's your name?"
+      },
+      {
+        "text": "Supongamos que alguien te pregunta tu nombre. Tú puedes responder: My name is John. Intenta decirlo otra vez.",
+        "expectedResponse": "My name is John"
+      },
+      {
+        "text": "Ahora vamos a hacer una pequeña simulación. Yo diré: What's your name? Y tú debes responder: My name is John. ¿Listo? What's your name?",
+        "expectedResponse": "My name is John"
+      },
+      {
+        "text": "Excelente. Ahora aprenderemos una forma informal de decir 'Encantado de conocerte'. En inglés decimos: Nice to meet you. Repite conmigo: Nice to meet you.",
+        "expectedResponse": "Nice to meet you"
+      },
+      {
+        "text": "Muy bien. Una vez más: Nice to meet you.",
+        "expectedResponse": "Nice to meet you"
+      },
+      {
+        "text": "Vamos a practicar un diálogo completo. Yo empiezo: Hello! What's your name?",
+        "expectedResponse": "My name is John"
+      },
+      {
+        "text": "Yo respondo: Nice to meet you! Y tú repites: Nice to meet you.",
+        "expectedResponse": "Nice to meet you"
+      },
+      {
+        "text": "¡Fantástico! Hoy aprendiste a decir tu nombre, preguntar el nombre de alguien más, y saludar con cortesía. Sigue practicando y nos vemos en la siguiente lección.",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  
