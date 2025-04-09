@@ -159,22 +159,22 @@ export default function Lesson2VoiceOnly() {
           <p className="text-center text-lg">
             {isUserTalking ? (
               <>
-                <span role="img" aria-label="hablando">🎤</span> You are speaking...
+                <span role="img" aria-label="hablando">🎤</span> Estas hablando..
               </>
             ) : awaitingResponse ? (
               <>
-                <span role="img" aria-label="espera">🕐</span> Repeat after the avatar, please...
+                <span role="img" aria-label="espera">🕐</span> Repite después del docente, por favor...
               </>
             ) : (
               <>
-                <span role="img" aria-label="esperando">🧠</span> Waiting for the next instruction...
+                <span role="img" aria-label="esperando">🧠</span> Espera la siguiente instrucción...
               </>
             )}
           </p>
 
           {currentStep >= lesson.dialog.length && (
             <p className="text-green-500 text-xl mt-4">
-              <span role="img" aria-label="fiesta">🎉</span> Lesson completed! Great job!
+              <span role="img" aria-label="fiesta">🎉</span> Lección completada! Buen trabajo!
             </p>
           )}
 
@@ -184,17 +184,17 @@ export default function Lesson2VoiceOnly() {
               onClick={handlePause}
               isDisabled={isPaused}
             >
-              <span role="img" aria-label="pausa">⏸️</span> Pause
+              <span role="img" aria-label="pausa">⏸️</span> Pausar
             </Button>
             <Button
               color="success"
               onClick={handleResume}
               isDisabled={!isPaused}
             >
-              <span role="img" aria-label="reanudar">▶️</span> Resume
+              <span role="img" aria-label="reanudar">▶️</span> Reanudar
             </Button>
             <Button color="default" onClick={speakNextStep}>
-              <span role="img" aria-label="repetir">🔁</span> Repeat instruction
+              <span role="img" aria-label="repetir">🔁</span> Repetir la instrucción
             </Button>
             <Button
               color="primary"
@@ -209,17 +209,17 @@ export default function Lesson2VoiceOnly() {
                 }
               }}
             >
-              <span role="img" aria-label="chat">💬</span> Send message
+              <span role="img" aria-label="chat">💬</span> Enviar Mensaje
             </Button>
             <Button color="danger" onClick={endLesson}>
-              <span role="img" aria-label="fin">🔚</span> End lesson
+              <span role="img" aria-label="fin">🔚</span> Finalizar sesión
             </Button>
           </div>
         </>
       ) : sessionEnded ? (
         <div className="flex flex-col items-center gap-4">
           <p className="text-lg text-gray-500 mt-4">
-            <span role="img" aria-label="fin clase">🔚</span> The lesson has ended.
+            <span role="img" aria-label="fin clase">🔚</span> La lección ha terminado.
           </p>
           <Button
             color="primary"
@@ -236,7 +236,7 @@ export default function Lesson2VoiceOnly() {
               startLesson();
             }}
           >
-            <span role="img" aria-label="reiniciar">🔁</span> Restart lesson
+            <span role="img" aria-label="reiniciar">🔁</span> Reiniciar sesión
           </Button>
         </div>
       ) : (
@@ -245,7 +245,7 @@ export default function Lesson2VoiceOnly() {
           onClick={startLesson}
           color="primary"
         >
-          Start lesson
+          Iniciar lección
         </Button>
       )}
     </div>
