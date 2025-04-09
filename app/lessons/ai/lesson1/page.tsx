@@ -12,7 +12,7 @@ import StreamingAvatar, {
 
 interface LessonStep {
   text: string;
-  expectedResponse?: string; // ← ahora es opcional, para evitar errores
+  expectedResponse?: string;
 }
 
 interface LessonData {
@@ -20,17 +20,15 @@ interface LessonData {
   avatarScript: string;
   dialog: LessonStep[];
 }
-// ... tus imports siguen igual
 
 export default function Lesson1VoiceOnly() {
-  // Estados
   const [lesson, setLesson] = useState<LessonData | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [isSessionLoading, setIsSessionLoading] = useState(false);
   const [stream, setStream] = useState<MediaStream>();
   const [isUserTalking, setIsUserTalking] = useState(false);
   const [awaitingResponse, setAwaitingResponse] = useState(false);
-  const [sessionEnded, setSessionEnded] = useState(false); // Nuevo
+  const [sessionEnded, setSessionEnded] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentText, setCurrentText] = useState<string>("");
   const [chatHistory, setChatHistory] = useState<
@@ -47,7 +45,7 @@ export default function Lesson1VoiceOnly() {
 
   async function startLesson() {
     setIsSessionLoading(true);
-    setSessionEnded(false); // Reiniciar flag
+    setSessionEnded(false);
     const token = await fetchAccessToken();
 
     avatar.current = new StreamingAvatar({
@@ -61,14 +59,12 @@ export default function Lesson1VoiceOnly() {
       setIsUserTalking(false);
       if (awaitingResponse && !isPaused) {
         const userMessage = lesson?.dialog[currentStep]?.expectedResponse;
-
         if (userMessage) {
           setChatHistory((prev) => [
             ...prev,
             { from: "user", message: userMessage },
           ]);
         }
-
         setCurrentStep((prev) => prev + 1);
         setAwaitingResponse(false);
         speakNextStep();
@@ -85,26 +81,22 @@ export default function Lesson1VoiceOnly() {
 
     await avatar.current.startVoiceChat();
     if (lesson?.avatarScript && avatar.current) {
-      console.log("SCRIPT INICIAL DEL AVATAR:", lesson.avatarScript);
       await avatar.current.speak({
         text: lesson.avatarScript,
         taskType: TaskType.TALK,
         taskMode: TaskMode.ASYNC,
       });
-    } else {
-      console.warn("❌ avatarScript no está cargado correctamente.");
     }
 
     speakNextStep();
     setIsSessionLoading(false);
   }
+
   async function speakNextStep() {
     const step = lesson?.dialog[currentStep];
     if (!step || !avatar.current) return;
 
     setCurrentText(step.text);
-
-    // Guardar lo que dice el avatar
     setChatHistory((prev) => [...prev, { from: "avatar", message: step.text }]);
 
     await avatar.current.speak({
@@ -149,7 +141,6 @@ export default function Lesson1VoiceOnly() {
 
   async function handleResume() {
     if (!avatar.current || !lesson) return;
-
     setIsPaused(false);
     const step = lesson.dialog[currentStep];
     if (!step) return;
@@ -179,22 +170,32 @@ export default function Lesson1VoiceOnly() {
             className="w-[600px] h-[400px] rounded-lg shadow"
           />
           <p className="text-center text-lg">
-            {isUserTalking
-              ? "🎤 Estás hablando..."
-              : awaitingResponse
-                ? "🕐 Repite después del avatar, por favor..."
-                : "🧠 Esperando la siguiente instrucción..."}
+            {isUserTalking ? (
+              <>
+                <span role="img" aria-label="hablando">🎤</span> Estás hablando...
+              </>
+            ) : awaitingResponse ? (
+              <>
+                <span role="img" aria-label="espera">🕐</span> Repite después del avatar, por favor...
+              </>
+            ) : (
+              <>
+                <span role="img" aria-label="esperando">🧠</span> Esperando la siguiente instrucción...
+              </>
+            )}
           </p>
           {currentText && (
             <div className="text-center mt-2 p-4 bg-white/10 rounded-lg text-base max-w-lg">
-              <p className="font-medium">📢 Instrucción actual:</p>
+              <p className="font-medium">
+                <span role="img" aria-label="instrucción">📢</span> Instrucción actual:
+              </p>
               <p className="italic text-indigo-300">{currentText}</p>
             </div>
           )}
 
           {currentStep >= lesson.dialog.length && (
             <p className="text-green-500 text-xl mt-4">
-              🎉 ¡Clase completada! ¡Excelente trabajo!
+              <span role="img" aria-label="fiesta">🎉</span> ¡Clase completada! ¡Excelente trabajo!
             </p>
           )}
 
@@ -204,7 +205,7 @@ export default function Lesson1VoiceOnly() {
               onClick={handlePause}
               isDisabled={isPaused}
             >
-              ⏸️ Pausar voz
+              <span role="img" aria-label="pausa">⏸️</span> Pausar voz
             </Button>
 
             <Button
@@ -212,11 +213,11 @@ export default function Lesson1VoiceOnly() {
               onClick={handleResume}
               isDisabled={!isPaused}
             >
-              ▶️ Reanudar
+              <span role="img" aria-label="reanudar">▶️</span> Reanudar
             </Button>
 
             <Button color="default" onClick={speakNextStep}>
-              🔁 Repetir instrucción
+              <span role="img" aria-label="repetir">🔁</span> Repetir instrucción
             </Button>
 
             <Button
@@ -232,16 +233,17 @@ export default function Lesson1VoiceOnly() {
                 }
               }}
             >
-              💬 Escribir por chat
+              <span role="img" aria-label="chat">💬</span> Escribir por chat
             </Button>
 
             <Button color="danger" onClick={endLesson}>
-              🔚 Finalizar clase
+              <span role="img" aria-label="fin">🔚</span> Finalizar clase
             </Button>
           </div>
+
           <div className="mt-6 w-full max-w-[600px]">
             <h2 className="text-xl font-semibold mb-2 text-center">
-              🗨️ Historial del Chat
+              <span role="img" aria-label="historial">🗨️</span> Historial del Chat
             </h2>
             <div className="bg-white shadow-md rounded-lg p-4 space-y-2">
               {chatHistory.map((entry, index) => (
@@ -265,7 +267,7 @@ export default function Lesson1VoiceOnly() {
       ) : sessionEnded ? (
         <div className="flex flex-col items-center gap-4">
           <p className="text-lg text-gray-500 mt-4">
-            🔚 La clase ha finalizado.
+            <span role="img" aria-label="fin clase">🔚</span> La clase ha finalizado.
           </p>
           <Button
             color="primary"
@@ -282,7 +284,7 @@ export default function Lesson1VoiceOnly() {
               startLesson();
             }}
           >
-            🔁 Volver a empezar
+            <span role="img" aria-label="reiniciar">🔁</span> Volver a empezar
           </Button>
         </div>
       ) : (

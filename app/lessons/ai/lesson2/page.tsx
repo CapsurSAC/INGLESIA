@@ -71,7 +71,6 @@ export default function Lesson2VoiceOnly() {
 
     await avatar.current.startVoiceChat();
 
-    console.log("SCRIPT INICIAL DEL AVATAR:", lesson?.avatarScript);
     await avatar.current.speak({
       text: lesson?.avatarScript || "Welcome!",
       taskType: TaskType.TALK,
@@ -158,16 +157,24 @@ export default function Lesson2VoiceOnly() {
             className="w-[600px] h-[400px] rounded-lg shadow"
           />
           <p className="text-center text-lg">
-            {isUserTalking
-              ? "🎤 Estás hablando..."
-              : awaitingResponse
-                ? "🕐 Repite después del avatar, por favor..."
-                : "🧠 Esperando la siguiente instrucción..."}
+            {isUserTalking ? (
+              <>
+                <span role="img" aria-label="hablando">🎤</span> You are speaking...
+              </>
+            ) : awaitingResponse ? (
+              <>
+                <span role="img" aria-label="espera">🕐</span> Repeat after the avatar, please...
+              </>
+            ) : (
+              <>
+                <span role="img" aria-label="esperando">🧠</span> Waiting for the next instruction...
+              </>
+            )}
           </p>
 
           {currentStep >= lesson.dialog.length && (
             <p className="text-green-500 text-xl mt-4">
-              🎉 ¡Clase completada! ¡Excelente trabajo!
+              <span role="img" aria-label="fiesta">🎉</span> Lesson completed! Great job!
             </p>
           )}
 
@@ -177,22 +184,22 @@ export default function Lesson2VoiceOnly() {
               onClick={handlePause}
               isDisabled={isPaused}
             >
-              ⏸️ Pausar voz
+              <span role="img" aria-label="pausa">⏸️</span> Pause
             </Button>
             <Button
               color="success"
               onClick={handleResume}
               isDisabled={!isPaused}
             >
-              ▶️ Reanudar
+              <span role="img" aria-label="reanudar">▶️</span> Resume
             </Button>
             <Button color="default" onClick={speakNextStep}>
-              🔁 Repetir instrucción
+              <span role="img" aria-label="repetir">🔁</span> Repeat instruction
             </Button>
             <Button
               color="primary"
               onClick={async () => {
-                const userInput = prompt("Escribe tu mensaje para el avatar:");
+                const userInput = prompt("Type your message for the avatar:");
                 if (userInput && avatar.current) {
                   await avatar.current.speak({
                     text: userInput,
@@ -202,17 +209,17 @@ export default function Lesson2VoiceOnly() {
                 }
               }}
             >
-              💬 Escribir por chat
+              <span role="img" aria-label="chat">💬</span> Send message
             </Button>
             <Button color="danger" onClick={endLesson}>
-              🔚 Finalizar clase
+              <span role="img" aria-label="fin">🔚</span> End lesson
             </Button>
           </div>
         </>
       ) : sessionEnded ? (
         <div className="flex flex-col items-center gap-4">
           <p className="text-lg text-gray-500 mt-4">
-            🔚 La clase ha finalizado.
+            <span role="img" aria-label="fin clase">🔚</span> The lesson has ended.
           </p>
           <Button
             color="primary"
@@ -229,7 +236,7 @@ export default function Lesson2VoiceOnly() {
               startLesson();
             }}
           >
-            🔁 Volver a empezar
+            <span role="img" aria-label="reiniciar">🔁</span> Restart lesson
           </Button>
         </div>
       ) : (
@@ -238,7 +245,7 @@ export default function Lesson2VoiceOnly() {
           onClick={startLesson}
           color="primary"
         >
-          Iniciar clase
+          Start lesson
         </Button>
       )}
     </div>
