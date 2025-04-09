@@ -1,0 +1,90 @@
+{
+  "title": "Lesson 1.1: Greetings and Introductions",
+  "avatarScript": "¡Hola! Bienvenido a tu primera clase de inglés. Hoy aprenderás a saludar, preguntar cómo está alguien y presentarte. Yo estaré contigo guiándote paso a paso. Escucha con atención, repite en voz alta y no te preocupes si te equivocas. ¡Empecemos!",
+  "dialog": [
+    {
+      "text": "La forma más común de saludar en inglés es decir: Hello. Se pronuncia: jelóu. Repite conmigo: Hello.",
+      "expectedResponse": "Hello"
+    },
+    {
+      "text": "Muy bien. Vamos a repetirlo una vez más: Hello.",
+      "expectedResponse": "Hello"
+    },
+    {
+      "text": "También puedes usar la palabra Hi. Es un saludo más informal. Se pronuncia: jai. Repite: Hi.",
+      "expectedResponse": "Hi"
+    },
+    {
+      "text": "Excelente. Repite de nuevo: Hi.",
+      "expectedResponse": "Hi"
+    },
+    {
+      "text": "Ahora aprenderemos a preguntar: ¿Cómo estás? En inglés se dice: How are you? Escucha: How are you?",
+      "expectedResponse": "How are you?"
+    },
+    {
+      "text": "Muy bien. Ahora repite conmigo: How are you?",
+      "expectedResponse": "How are you?"
+    },
+    {
+      "text": "Cuando alguien te pregunta 'How are you?', puedes responder: I'm fine, thank you. Significa: Estoy bien, gracias. Repite: I'm fine, thank you.",
+      "expectedResponse": "I'm fine, thank you."
+    },
+    {
+      "text": "Muy bien. Una vez más: I'm fine, thank you.",
+      "expectedResponse": "I'm fine, thank you."
+    },
+    {
+      "text": "Vamos a practicar una conversación sencilla. Yo diré: Hello. Y tú responderás lo mismo: Hello. ¿Listo? Hello.",
+      "expectedResponse": "Hello"
+    },
+    {
+      "text": "Perfecto. Ahora yo diré: How are you? Y tú responderás: I'm fine, thank you. Vamos a intentarlo. How are you?",
+      "expectedResponse": "I'm fine, thank you."
+    },
+    {
+      "text": "¡Muy bien! Vamos a repetir ese diálogo una vez más. Yo digo: Hello.",
+      "expectedResponse": "Hello"
+    },
+    {
+      "text": "How are you?",
+      "expectedResponse": "I'm fine, thank you."
+    },
+    {
+      "text": "Excelente. Ahora aprenderás a presentarte. En inglés, para decir 'Mi nombre es...', usamos: My name is... Por ejemplo: My name is Ana. Repite: My name is Ana.",
+      "expectedResponse": "My name is Ana"
+    },
+    {
+      "text": "Muy bien. Ahora intenta con tu propio nombre. Repite: My name is...",
+      "expectedResponse": "My name is [tu nombre]"
+    },
+    {
+      "text": "Cuando conocemos a alguien por primera vez, también podemos decir: Nice to meet you. Significa: Gusto en conocerte. Repite conmigo: Nice to meet you.",
+      "expectedResponse": "Nice to meet you"
+    },
+    {
+      "text": "Otra vez: Nice to meet you.",
+      "expectedResponse": "Nice to meet you"
+    },
+    {
+      "text": "Vamos a practicar todo en una conversación. Yo empiezo: Hello.",
+      "expectedResponse": "Hello"
+    },
+    {
+      "text": "How are you?",
+      "expectedResponse": "I'm fine, thank you."
+    },
+    {
+      "text": "What’s your name?",
+      "expectedResponse": "My name is [tu nombre]"
+    },
+    {
+      "text": "Nice to meet you.",
+      "expectedResponse": "Nice to meet you"
+    },
+    {
+      "text": "¡Fantástico trabajo! Hoy has aprendido a saludar, preguntar cómo estás, responder y presentarte en inglés. Repite esta lección si deseas practicar más. ¡Nos vemos en la siguiente clase!",
+      "expectedResponse": ""
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+    "title": "Lesson 1.3: El abecedario en inglés",
+    "avatarScript": "Hola de nuevo. En esta lección aprenderás a pronunciar el abecedario en inglés. Esto es muy importante para deletrear tu nombre, correo electrónico o cualquier palabra. Escucha con atención y repite conmigo.",
+    "dialog": [
+      {
+        "text": "Empezamos con la primera letra. A se pronuncia: Ey. Repite conmigo: Ey.",
+        "expectedResponse": "Ey"
+      },
+      {
+        "text": "La siguiente es B. Se pronuncia: Bi. Repite: Bi.",
+        "expectedResponse": "Bi"
+      },
+      {
+        "text": "Muy bien. Ahora la letra C. En inglés se dice: Si. Repite: Si.",
+        "expectedResponse": "Si"
+      },
+      {
+        "text": "Continuamos con D. Se pronuncia: Di. Repite: Di.",
+        "expectedResponse": "Di"
+      },
+      {
+        "text": "La letra E se pronuncia: I. Repite: I.",
+        "expectedResponse": "I"
+      },
+      {
+        "text": "Ahora una pausa para repasar. Repitamos desde la A hasta la E. Ey, Bi, Si, Di, I.",
+        "expectedResponse": "Ey, Bi, Si, Di, I"
+      },
+      {
+        "text": "Perfecto. Sigamos. La letra F se dice: Ef. Repite: Ef.",
+        "expectedResponse": "Ef"
+      },
+      {
+        "text": "G se pronuncia: Yi. Repite conmigo: Yi.",
+        "expectedResponse": "Yi"
+      },
+      {
+        "text": "La letra H en inglés se dice: Eich. Repite: Eich.",
+        "expectedResponse": "Eich"
+      },
+      {
+        "text": "Muy bien. Ahora I se pronuncia: Ay. Repite: Ay.",
+        "expectedResponse": "Ay"
+      },
+      {
+        "text": "Y la letra J se dice: Yei. Repite: Yei.",
+        "expectedResponse": "Yei"
+      },
+      {
+        "text": "Muy bien. Vamos a practicar un grupo más largo: Ef, Yi, Eich, Ay, Yei.",
+        "expectedResponse": "Ef, Yi, Eich, Ay, Yei"
+      },
+      {
+        "text": "Ahora deletreemos una palabra fácil. Vamos a deletrear la palabra CAT. Escucha: C - A - T.",
+        "expectedResponse": "C - A - T"
+      },
+      {
+        "text": "Muy bien. Ahora tú. Deletrea conmigo: C - A - T.",
+        "expectedResponse": "C - A - T"
+      },
+      {
+        "text": "¡Excelente trabajo! Aprender el abecedario te ayudará en muchas situaciones. Nos vemos en la próxima lección para aprender los números. ¡Hasta pronto!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import { Spinner, Button } from "@nextui-org/react";
+import { useEffect, useRef, useState } from 'react';
+import { Spinner, Button } from '@nextui-org/react';
 import StreamingAvatar, {
   AvatarQuality,
   StreamingEvents,
   VoiceEmotion,
   TaskType,
   TaskMode,
-} from "@heygen/streaming-avatar";
+} from '@heygen/streaming-avatar';
 
 interface LessonStep {
   text: string;
@@ -21,7 +21,7 @@ interface LessonData {
   dialog: LessonStep[];
 }
 
-export default function Lesson2VoiceOnly() {
+export default function Lesson3VoiceOnly() {
   const [lesson, setLesson] = useState<LessonData | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [isSessionLoading, setIsSessionLoading] = useState(false);
@@ -30,13 +30,12 @@ export default function Lesson2VoiceOnly() {
   const [awaitingResponse, setAwaitingResponse] = useState(false);
   const [sessionEnded, setSessionEnded] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [currentText, setCurrentText] = useState<string>("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const avatar = useRef<StreamingAvatar | null>(null);
 
   async function fetchAccessToken() {
-    const res = await fetch("/api/get-access-token", { method: "POST" });
+    const res = await fetch('/api/get-access-token', { method: 'POST' });
     return await res.text();
   }
 
@@ -63,8 +62,8 @@ export default function Lesson2VoiceOnly() {
 
     await avatar.current.createStartAvatar({
       quality: AvatarQuality.Medium,
-      avatarName: "June_HR_public",
-      language: "en",
+      avatarName: 'June_HR_public',
+      language: 'en',
       disableIdleTimeout: true,
       voice: { rate: 1.1, emotion: VoiceEmotion.FRIENDLY },
     });
@@ -72,7 +71,7 @@ export default function Lesson2VoiceOnly() {
     await avatar.current.startVoiceChat();
 
     await avatar.current.speak({
-      text: lesson?.avatarScript || "Welcome!",
+      text: lesson?.avatarScript || 'Welcome!',
       taskType: TaskType.TALK,
       taskMode: TaskMode.ASYNC,
     });
@@ -85,7 +84,6 @@ export default function Lesson2VoiceOnly() {
     const step = lesson?.dialog[currentStep];
     if (!step || !avatar.current) return;
 
-    setCurrentText(step.text);
     await avatar.current.speak({
       text: step.text,
       taskType: TaskType.TALK,
@@ -128,7 +126,7 @@ export default function Lesson2VoiceOnly() {
 
   useEffect(() => {
     async function loadLesson() {
-      const res = await fetch("/lessons/ai/lesson2.json");
+      const res = await fetch('/lessons/ai/lesson3.json');
       const data = await res.json();
       setLesson(data);
     }
@@ -142,7 +140,7 @@ export default function Lesson2VoiceOnly() {
     }
   }, [stream]);
 
-  if (!lesson) return <Spinner label="Iniciando..." />;
+  if (!lesson) return <Spinner label="Cargando lección..." />;
 
   return (
     <div className="p-6 flex flex-col items-center gap-4">
@@ -157,70 +155,31 @@ export default function Lesson2VoiceOnly() {
             className="w-[600px] h-[400px] rounded-lg shadow"
           />
           <p className="text-center text-lg">
-            {isUserTalking ? (
-              <>
-                <span role="img" aria-label="hablando">🎤</span> Estas hablando..
-              </>
-            ) : awaitingResponse ? (
-              <>
-                <span role="img" aria-label="espera">🕐</span> Repite después del docente, por favor...
-              </>
-            ) : (
-              <>
-                <span role="img" aria-label="esperando">🧠</span> Espera la siguiente instrucción...
-              </>
-            )}
+            {isUserTalking ? '🎤 Hablando...' : awaitingResponse ? '🕐 Repite por favor...' : '🧠 Esperando...'}
           </p>
 
           {currentStep >= lesson.dialog.length && (
-            <p className="text-green-500 text-xl mt-4">
-              <span role="img" aria-label="fiesta">🎉</span> Lección completada! Buen trabajo!
-            </p>
+            <p className="text-green-500 text-xl mt-4">🎉 ¡Lección completada! ¡Buen trabajo!</p>
           )}
 
           <div className="flex gap-4 flex-wrap justify-center mt-4">
-            <Button
-              color="secondary"
-              onClick={handlePause}
-              isDisabled={isPaused}
-            >
-              <span role="img" aria-label="pausa">⏸️</span> Pausar
+            <Button color="secondary" onClick={handlePause} isDisabled={isPaused}>
+              ⏸️ Pausar
             </Button>
-            <Button
-              color="success"
-              onClick={handleResume}
-              isDisabled={!isPaused}
-            >
-              <span role="img" aria-label="reanudar">▶️</span> Reanudar
+            <Button color="success" onClick={handleResume} isDisabled={!isPaused}>
+              ▶️ Reanudar
             </Button>
             <Button color="default" onClick={speakNextStep}>
-              <span role="img" aria-label="repetir">🔁</span> Repetir la instrucción
-            </Button>
-            <Button
-              color="primary"
-              onClick={async () => {
-                const userInput = prompt("Type your message for the avatar:");
-                if (userInput && avatar.current) {
-                  await avatar.current.speak({
-                    text: userInput,
-                    taskType: TaskType.TALK,
-                    taskMode: TaskMode.ASYNC,
-                  });
-                }
-              }}
-            >
-              <span role="img" aria-label="chat">💬</span> Enviar Mensaje
+              🔁 Repetir
             </Button>
             <Button color="danger" onClick={endLesson}>
-              <span role="img" aria-label="fin">🔚</span> Finalizar sesión
+              🔚 Terminar
             </Button>
           </div>
         </>
       ) : sessionEnded ? (
         <div className="flex flex-col items-center gap-4">
-          <p className="text-lg text-gray-500 mt-4">
-            <span role="img" aria-label="fin clase">🔚</span> La lección ha terminado.
-          </p>
+          <p className="text-lg text-gray-500 mt-4">🔚 La lección ha terminado.</p>
           <Button
             color="primary"
             onClick={() => {
@@ -236,15 +195,11 @@ export default function Lesson2VoiceOnly() {
               startLesson();
             }}
           >
-            <span role="img" aria-label="reiniciar">🔁</span> Reiniciar sesión
+            🔁 Reiniciar
           </Button>
         </div>
       ) : (
-        <Button
-          isLoading={isSessionLoading}
-          onClick={startLesson}
-          color="primary"
-        >
+        <Button isLoading={isSessionLoading} onClick={startLesson} color="primary">
           Iniciar lección
         </Button>
       )}

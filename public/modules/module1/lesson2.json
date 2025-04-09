@@ -1,0 +1,110 @@
+{
+  "title": "Lesson 1.2: Personal Pronouns and the Verb 'To Be'",
+  "avatarScript": "¡Hola! Bienvenido a la segunda parte del Módulo 1. En esta lección aprenderás a presentarte usando pronombres personales como I, you, he, she, y el verbo 'to be' en presente. Yo te explicaré en español y te daré los ejemplos en inglés. ¡Empecemos!",
+  "dialog": [
+    {
+      "text": "Comencemos aprendiendo los pronombres personales en inglés. Repite después de mí: I, you, he, she, it, we, they.",
+      "expectedResponse": "I, you, he, she, it, we, they"
+    },
+    {
+      "text": "Muy bien. Ahora uno por uno. Repite: I.",
+      "expectedResponse": "I"
+    },
+    {
+      "text": "Ahora tú: you.",
+      "expectedResponse": "you"
+    },
+    {
+      "text": "Repite: he.",
+      "expectedResponse": "he"
+    },
+    {
+      "text": "Ahora ella: she.",
+      "expectedResponse": "she"
+    },
+    {
+      "text": "Para objetos o animales: it.",
+      "expectedResponse": "it"
+    },
+    {
+      "text": "Nosotros: we.",
+      "expectedResponse": "we"
+    },
+    {
+      "text": "Y por último: ellos o ellas: they.",
+      "expectedResponse": "they"
+    },
+    {
+      "text": "¡Excelente! Ahora veremos el verbo 'to be' en presente. Escucha: I am, you are, he is, she is, it is, we are, they are.",
+      "expectedResponse": "I am, you are, he is, she is, it is, we are, they are"
+    },
+    {
+      "text": "Repite conmigo: I am.",
+      "expectedResponse": "I am"
+    },
+    {
+      "text": "You are.",
+      "expectedResponse": "You are"
+    },
+    {
+      "text": "He is.",
+      "expectedResponse": "He is"
+    },
+    {
+      "text": "She is.",
+      "expectedResponse": "She is"
+    },
+    {
+      "text": "It is.",
+      "expectedResponse": "It is"
+    },
+    {
+      "text": "We are.",
+      "expectedResponse": "We are"
+    },
+    {
+      "text": "They are.",
+      "expectedResponse": "They are"
+    },
+    {
+      "text": "Ahora vamos a formar frases completas. Repite: I am a student.",
+      "expectedResponse": "I am a student"
+    },
+    {
+      "text": "You are my friend.",
+      "expectedResponse": "You are my friend"
+    },
+    {
+      "text": "He is a teacher.",
+      "expectedResponse": "He is a teacher"
+    },
+    {
+      "text": "She is a doctor.",
+      "expectedResponse": "She is a doctor"
+    },
+    {
+      "text": "It is a book.",
+      "expectedResponse": "It is a book"
+    },
+    {
+      "text": "We are classmates.",
+      "expectedResponse": "We are classmates"
+    },
+    {
+      "text": "They are from Peru.",
+      "expectedResponse": "They are from Peru"
+    },
+    {
+      "text": "Muy bien, vamos a practicar un diálogo. Yo digo: Hello! What's your name? Tú debes responder: My name is John. I am a student.",
+      "expectedResponse": "My name is John. I am a student"
+    },
+    {
+      "text": "Perfecto. Ahora tú haz la pregunta: What's your name?",
+      "expectedResponse": "What's your name?"
+    },
+    {
+      "text": "Muy bien. ¡Eso fue todo por hoy! Has aprendido los pronombres personales, el verbo 'to be', y cómo hacer frases simples. ¡Sigue practicando!",
+      "expectedResponse": ""
+    }
+  ]
+}
