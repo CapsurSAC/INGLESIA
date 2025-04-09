@@ -7,7 +7,7 @@
         "expectedResponse": "My name is John"
       },
       {
-        "text": "Muy bien. Repite de nuevo: My name is John.",
+        "text": "Muy bien. Repite de nuevo por favor: My name is John.",
         "expectedResponse": "My name is John"
       },
       {
