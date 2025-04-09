@@ -52,7 +52,7 @@ export default function InteractiveAvatarTextInput({
                 <PaperPlaneRight
                   className={clsx(
                     "text-indigo-300 hover:text-indigo-200",
-                    disabled && "opacity-50"
+                    disabled && "opacity-50",
                   )}
                   size={24}
                 />

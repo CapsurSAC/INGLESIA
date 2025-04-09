@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { Spinner, Button } from '@nextui-org/react';
+import { useEffect, useRef, useState } from "react";
+import { Spinner, Button } from "@nextui-org/react";
 import StreamingAvatar, {
   AvatarQuality,
   StreamingEvents,
   VoiceEmotion,
   TaskType,
   TaskMode,
-} from '@heygen/streaming-avatar';
+} from "@heygen/streaming-avatar";
 
 interface LessonStep {
   text: string;
@@ -36,7 +36,7 @@ export default function Lesson2VoiceOnly() {
   const avatar = useRef<StreamingAvatar | null>(null);
 
   async function fetchAccessToken() {
-    const res = await fetch('/api/get-access-token', { method: 'POST' });
+    const res = await fetch("/api/get-access-token", { method: "POST" });
     return await res.text();
   }
 
@@ -63,8 +63,8 @@ export default function Lesson2VoiceOnly() {
 
     await avatar.current.createStartAvatar({
       quality: AvatarQuality.Medium,
-      avatarName: 'June_HR_public',
-      language: 'en',
+      avatarName: "June_HR_public",
+      language: "en",
       disableIdleTimeout: true,
       voice: { rate: 1.1, emotion: VoiceEmotion.FRIENDLY },
     });
@@ -73,7 +73,7 @@ export default function Lesson2VoiceOnly() {
 
     console.log("SCRIPT INICIAL DEL AVATAR:", lesson?.avatarScript);
     await avatar.current.speak({
-      text: lesson?.avatarScript || 'Welcome!',
+      text: lesson?.avatarScript || "Welcome!",
       taskType: TaskType.TALK,
       taskMode: TaskMode.ASYNC,
     });
@@ -129,7 +129,7 @@ export default function Lesson2VoiceOnly() {
 
   useEffect(() => {
     async function loadLesson() {
-      const res = await fetch('/lessons/ai/lesson2.json');
+      const res = await fetch("/lessons/ai/lesson2.json");
       const data = await res.json();
       setLesson(data);
     }
@@ -161,8 +161,8 @@ export default function Lesson2VoiceOnly() {
             {isUserTalking
               ? "🎤 Estás hablando..."
               : awaitingResponse
-              ? "🕐 Repite después del avatar, por favor..."
-              : "🧠 Esperando la siguiente instrucción..."}
+                ? "🕐 Repite después del avatar, por favor..."
+                : "🧠 Esperando la siguiente instrucción..."}
           </p>
 
           {currentStep >= lesson.dialog.length && (
@@ -172,10 +172,18 @@ export default function Lesson2VoiceOnly() {
           )}
 
           <div className="flex gap-4 flex-wrap justify-center mt-4">
-            <Button color="secondary" onClick={handlePause} isDisabled={isPaused}>
+            <Button
+              color="secondary"
+              onClick={handlePause}
+              isDisabled={isPaused}
+            >
               ⏸️ Pausar voz
             </Button>
-            <Button color="success" onClick={handleResume} isDisabled={!isPaused}>
+            <Button
+              color="success"
+              onClick={handleResume}
+              isDisabled={!isPaused}
+            >
               ▶️ Reanudar
             </Button>
             <Button color="default" onClick={speakNextStep}>
@@ -203,7 +211,9 @@ export default function Lesson2VoiceOnly() {
         </>
       ) : sessionEnded ? (
         <div className="flex flex-col items-center gap-4">
-          <p className="text-lg text-gray-500 mt-4">🔚 La clase ha finalizado.</p>
+          <p className="text-lg text-gray-500 mt-4">
+            🔚 La clase ha finalizado.
+          </p>
           <Button
             color="primary"
             onClick={() => {
@@ -223,7 +233,11 @@ export default function Lesson2VoiceOnly() {
           </Button>
         </div>
       ) : (
-        <Button isLoading={isSessionLoading} onClick={startLesson} color="primary">
+        <Button
+          isLoading={isSessionLoading}
+          onClick={startLesson}
+          color="primary"
+        >
           Iniciar clase
         </Button>
       )}

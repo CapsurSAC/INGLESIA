@@ -5,22 +5,24 @@ import ReactCodeMirror from "@uiw/react-codemirror";
 export default function InteractiveAvatarCode() {
   return (
     <div className="w-full flex flex-col gap-2">
-      <p>
-      Este SDK admite el siguiente comportamiento:</p>
+      <p>Este SDK admite el siguiente comportamiento:</p>
       <ul>
         <li>
           <div className="flex flex-row gap-2">
-            <p className="text-indigo-400 font-semibold">Iniciar:</p> Iniciar la sesión de avatar interactivo
+            <p className="text-indigo-400 font-semibold">Iniciar:</p> Iniciar la
+            sesión de avatar interactivo
           </div>
         </li>
         <li>
           <div className="flex flex-row gap-2">
-            <p className="text-indigo-400 font-semibold">Finalizar:</p> Cerrar la sesión de avatar interactivo
+            <p className="text-indigo-400 font-semibold">Finalizar:</p> Cerrar
+            la sesión de avatar interactivo
           </div>
         </li>
         <li>
           <div className="flex flex-row gap-2">
-            <p className="text-indigo-400 font-semibold">Hablar:</p> Repita la entrada
+            <p className="text-indigo-400 font-semibold">Hablar:</p> Repita la
+            entrada
           </div>
         </li>
       </ul>

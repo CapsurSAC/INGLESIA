@@ -233,8 +233,6 @@ export default function InteractiveAvatar() {
           ) : !isLoadingSession ? (
             <div className="h-full justify-center items-center flex flex-col gap-8 w-[500px] self-center">
               <div className="flex flex-col gap-2 w-full">
-                
-               
                 <Select
                   placeholder="seleccione uno de estos avatares de ejemplo"
                   size="md"
@@ -244,7 +242,7 @@ export default function InteractiveAvatar() {
                 >
                   {AVATARS.map((avatar) => (
                     <SelectItem
-                     key={avatar.avatar_id}
+                      key={avatar.avatar_id}
                       textValue={avatar.avatar_id}
                     >
                       {avatar.name}
@@ -271,7 +269,7 @@ export default function InteractiveAvatar() {
                 variant="shadow"
                 onClick={startSession}
               >
-              INICIAR CLASE
+                INICIAR CLASE
               </Button>
             </div>
           ) : (

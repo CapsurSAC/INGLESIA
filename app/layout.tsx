@@ -17,8 +17,6 @@ const fontMono = FontMono({
   variable: "--font-geist-mono",
 });
 
-
-
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },

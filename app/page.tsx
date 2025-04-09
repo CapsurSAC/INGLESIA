@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { Card, CardBody, Button } from '@nextui-org/react';
-import { useRouter } from 'next/navigation';
+import { Card, CardBody, Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   const router = useRouter();
 
   const handleStartLesson = () => {
-    router.push('/lessons/ai/lesson1');
+    router.push("/lessons/ai/lesson1");
   };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-6 p-6 bg-black text-white">
       <h1 className="text-3xl font-bold text-center">
-        🎓 Bienvenido a <span className="text-indigo-400">Next Inglés Online</span>
+        🎓 Bienvenido a{" "}
+        <span className="text-indigo-400">Next Inglés Online</span>
       </h1>
 
       <Card className="max-w-md w-full">
@@ -41,7 +42,6 @@ export default function HomePage() {
           {/* Aquí puedes seguir agregando más niveles o temas en el futuro */}
         </CardBody>
       </Card>
-
     </div>
   );
 }

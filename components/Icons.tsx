@@ -1,7 +1,11 @@
 export function HeyGenLogo() {
-  return <img src="/logo.png" alt="NextIngles Logo" style={{ height: '100px', width: 'auto' }} />;
-
-
+  return (
+    <img
+      src="/logo.png"
+      alt="NextIngles Logo"
+      style={{ height: "100px", width: "auto" }}
+    />
+  );
 }
 
 type IconSvgProps = {
