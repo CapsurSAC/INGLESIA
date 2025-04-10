@@ -1,0 +1,87 @@
+{
+    "title": "Lesson 4.1: Telling Time",
+    "avatarScript": "Hola. Hoy aprenderás a decir la hora en inglés. Saber decir la hora es muy útil para planear actividades, tomar transporte o simplemente saber cuándo es el almuerzo. Escucha con atención y repite cada frase después de mí.",
+    "dialog": [
+      {
+        "text": "Empecemos con la pregunta: ¿Qué hora es? En inglés decimos: What time is it? Repite conmigo: What time is it?",
+        "expectedResponse": "What time is it?"
+      },
+      {
+        "text": "Muy bien. Para decir la hora usamos 'It's' más la hora. Por ejemplo, 'Es la una' se dice: It's one o'clock. Repite: It's one o'clock.",
+        "expectedResponse": "It's one o'clock"
+      },
+      {
+        "text": "'Son las dos' se dice: It's two o'clock. Repite: It's two o'clock.",
+        "expectedResponse": "It's two o'clock"
+      },
+      {
+        "text": "'Son las tres' se dice: It's three o'clock. Repite: It's three o'clock.",
+        "expectedResponse": "It's three o'clock"
+      },
+      {
+        "text": "Muy bien. Ahora veremos cómo decir los minutos. Por ejemplo, 'Es la una y cinco' se dice: It's one oh five. Repite: It's one oh five.",
+        "expectedResponse": "It's one oh five"
+      },
+      {
+        "text": "Si quieres decir 'Es la una y cuarto', en inglés se dice: It's one fifteen. Repite: It's one fifteen.",
+        "expectedResponse": "It's one fifteen"
+      },
+      {
+        "text": "También puedes decir: It's a quarter past one. Eso también significa 'la una y cuarto'. Repite: It's a quarter past one.",
+        "expectedResponse": "It's a quarter past one"
+      },
+      {
+        "text": "Muy bien. Ahora vamos a decir 'Es la una y media'. En inglés se dice: It's one thirty. Repite: It's one thirty.",
+        "expectedResponse": "It's one thirty"
+      },
+      {
+        "text": "También puedes decir: It's half past one. Repite: It's half past one.",
+        "expectedResponse": "It's half past one"
+      },
+      {
+        "text": "Perfecto. Para decir 'faltan quince para las dos', usamos: It's a quarter to two. Repite: It's a quarter to two.",
+        "expectedResponse": "It's a quarter to two"
+      },
+      {
+        "text": "Ahora practica: ¿Qué hora es? Tú respondes: It's four o'clock.",
+        "expectedResponse": "It's four o'clock"
+      },
+      {
+        "text": "Una más. Yo pregunto: What time is it? Tú respondes: It's half past five.",
+        "expectedResponse": "It's half past five"
+      },
+      {
+        "text": "Muy bien. Ahora intenta decir tú la hora siguiente: It's seven fifteen.",
+        "expectedResponse": "It's seven fifteen"
+      },
+      {
+        "text": "Excelente. Ahora una combinación. What time is it? Tú respondes: It's a quarter to six.",
+        "expectedResponse": "It's a quarter to six"
+      },
+      {
+        "text": "Vamos a repasar. Repite después de mí: It's one o'clock, It's one fifteen, It's one thirty, It's a quarter to two.",
+        "expectedResponse": "It's one o'clock, It's one fifteen, It's one thirty, It's a quarter to two"
+      },
+      {
+        "text": "Último ejercicio. Yo digo una hora en español, y tú la dices en inglés. Son las tres y media.",
+        "expectedResponse": "It's three thirty"
+      },
+      {
+        "text": "Son las doce y cuarto.",
+        "expectedResponse": "It's twelve fifteen"
+      },
+      {
+        "text": "Faltan diez para las cuatro.",
+        "expectedResponse": "It's ten to four"
+      },
+      {
+        "text": "Muy bien. Ya sabes cómo preguntar y decir la hora en inglés.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima lección donde aprenderás los días de la semana. ¡Sigue practicando!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

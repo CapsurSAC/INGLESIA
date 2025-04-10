@@ -1,0 +1,99 @@
+{
+    "title": "Lesson 4.3: Months of the Year",
+    "avatarScript": "¡Hola nuevamente! Hoy vamos a aprender los doce meses del año en inglés. Es fundamental para hablar de fechas, cumpleaños, estaciones del año y mucho más. Escucha con atención, repite y practica. ¡Vamos a comenzar!",
+    "dialog": [
+      {
+        "text": "Empezamos con el primer mes. Enero se dice: January. Repite conmigo: January.",
+        "expectedResponse": "January"
+      },
+      {
+        "text": "El segundo mes es febrero. En inglés: February. Repite: February.",
+        "expectedResponse": "February"
+      },
+      {
+        "text": "Marzo se dice: March. Repite: March.",
+        "expectedResponse": "March"
+      },
+      {
+        "text": "Abril es: April. Repite: April.",
+        "expectedResponse": "April"
+      },
+      {
+        "text": "Mayo se dice: May. Es fácil. Repite: May.",
+        "expectedResponse": "May"
+      },
+      {
+        "text": "Junio en inglés es: June. Repite conmigo: June.",
+        "expectedResponse": "June"
+      },
+      {
+        "text": "Julio se dice: July. Repite: July.",
+        "expectedResponse": "July"
+      },
+      {
+        "text": "Agosto en inglés es: August. Repite: August.",
+        "expectedResponse": "August"
+      },
+      {
+        "text": "Septiembre se dice: September. Repite: September.",
+        "expectedResponse": "September"
+      },
+      {
+        "text": "Octubre en inglés es: October. Repite: October.",
+        "expectedResponse": "October"
+      },
+      {
+        "text": "Noviembre se dice: November. Repite: November.",
+        "expectedResponse": "November"
+      },
+      {
+        "text": "Y por último, diciembre se dice: December. Repite conmigo: December.",
+        "expectedResponse": "December"
+      },
+      {
+        "text": "Muy bien. Ahora repite todos los meses del año en orden conmigo. ¿Listo? January, February, March, April, May, June, July, August, September, October, November, December.",
+        "expectedResponse": "January, February, March, April, May, June, July, August, September, October, November, December"
+      },
+      {
+        "text": "¿Cómo se dice mayo?",
+        "expectedResponse": "May"
+      },
+      {
+        "text": "¿Y cómo se dice octubre?",
+        "expectedResponse": "October"
+      },
+      {
+        "text": "¿Puedes decir el nombre del mes después de June?",
+        "expectedResponse": "July"
+      },
+      {
+        "text": "Perfecto. Ahora practica algunas frases útiles. 'Mi cumpleaños es en julio' se dice: My birthday is in July. Repite: My birthday is in July.",
+        "expectedResponse": "My birthday is in July"
+      },
+      {
+        "text": "'Hoy es 5 de abril' se dice: Today is April 5th. Repite: Today is April 5th.",
+        "expectedResponse": "Today is April 5th"
+      },
+      {
+        "text": "'Navidad es en diciembre' se dice: Christmas is in December. Repite: Christmas is in December.",
+        "expectedResponse": "Christmas is in December"
+      },
+      {
+        "text": "¿Cómo se dice 'Mi cumpleaños es en octubre'?",
+        "expectedResponse": "My birthday is in October"
+      },
+      {
+        "text": "Muy bien. Vamos a decir todos los meses una vez más, más rápido esta vez. Repite conmigo: January, February, March, April, May, June, July, August, September, October, November, December.",
+        "expectedResponse": "January, February, March, April, May, June, July, August, September, October, November, December"
+      },
+      {
+        "text": "¡Excelente trabajo! Ahora ya conoces los meses del año en inglés. Esto te ayudará en conversaciones cotidianas, especialmente cuando hables sobre fechas importantes.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima lección. ¡Sigue practicando!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

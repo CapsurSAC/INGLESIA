@@ -1,0 +1,75 @@
+{
+    "title": "Lesson 2.4: Mi día típico",
+    "avatarScript": "Hola nuevamente. En esta lección aprenderás cómo hablar sobre tu rutina diaria en inglés. Desde que te levantas hasta que te acuestas. Vamos a practicar frases comunes que describen tu día. Escucha atentamente y repite después de mí.",
+    "dialog": [
+      {
+        "text": "Comencemos. 'Me levanto a las siete' se dice: I wake up at seven. Repite: I wake up at seven.",
+        "expectedResponse": "I wake up at seven"
+      },
+      {
+        "text": "'Me cepillo los dientes' se dice: I brush my teeth. Repite: I brush my teeth.",
+        "expectedResponse": "I brush my teeth"
+      },
+      {
+        "text": "'Me ducho' se dice: I take a shower. Repite: I take a shower.",
+        "expectedResponse": "I take a shower"
+      },
+      {
+        "text": "'Me visto' se dice: I get dressed. Repite: I get dressed.",
+        "expectedResponse": "I get dressed"
+      },
+      {
+        "text": "'Desayuno' se dice: I eat breakfast. Repite: I eat breakfast.",
+        "expectedResponse": "I eat breakfast"
+      },
+      {
+        "text": "Muy bien. Ahora, escucha y repite toda la secuencia: I wake up, I brush my teeth, I take a shower, I get dressed, I eat breakfast.",
+        "expectedResponse": "I wake up, I brush my teeth, I take a shower, I get dressed, I eat breakfast"
+      },
+      {
+        "text": "'Voy al trabajo' se dice: I go to work. Repite: I go to work.",
+        "expectedResponse": "I go to work"
+      },
+      {
+        "text": "'Trabajo de nueve a cinco' se dice: I work from nine to five. Repite: I work from nine to five.",
+        "expectedResponse": "I work from nine to five"
+      },
+      {
+        "text": "'Almuerzo al mediodía' se dice: I eat lunch at noon. Repite: I eat lunch at noon.",
+        "expectedResponse": "I eat lunch at noon"
+      },
+      {
+        "text": "'Regreso a casa' se dice: I go back home. Repite: I go back home.",
+        "expectedResponse": "I go back home"
+      },
+      {
+        "text": "'Ceno a las siete' se dice: I eat dinner at seven. Repite: I eat dinner at seven.",
+        "expectedResponse": "I eat dinner at seven"
+      },
+      {
+        "text": "'Veo televisión' se dice: I watch TV. Repite: I watch TV.",
+        "expectedResponse": "I watch TV"
+      },
+      {
+        "text": "'Me acuesto a las diez' se dice: I go to bed at ten. Repite: I go to bed at ten.",
+        "expectedResponse": "I go to bed at ten"
+      },
+      {
+        "text": "Muy bien. Ahora repite todo el día completo conmigo: I wake up at seven, I brush my teeth, I take a shower, I get dressed, I eat breakfast, I go to work, I eat lunch at noon, I go back home, I eat dinner, I watch TV, I go to bed at ten.",
+        "expectedResponse": "I wake up at seven, I brush my teeth, I take a shower, I get dressed, I eat breakfast, I go to work, I eat lunch at noon, I go back home, I eat dinner, I watch TV, I go to bed at ten"
+      },
+      {
+        "text": "Ahora, trata de describir tu rutina. Puedes comenzar con: I wake up at...",
+        "expectedResponse": ""
+      },
+      {
+        "text": "¡Muy buen trabajo! Has aprendido a hablar de tu día típico en inglés. Esto es clave para conversaciones cotidianas.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en el siguiente módulo. ¡Sigue practicando!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

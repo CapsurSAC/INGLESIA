@@ -1,0 +1,71 @@
+{
+    "title": "Lesson 3.3: Asking for Directions",
+    "avatarScript": "Hola. En esta lección aprenderás cómo pedir y entender direcciones en inglés. Esto te ayudará si estás viajando o buscando un lugar en una ciudad. Vamos paso a paso.",
+    "dialog": [
+      {
+        "text": "Primero, la frase clave: '¿Dónde está...?' se dice: Where is...? Repite conmigo: Where is...?",
+        "expectedResponse": "Where is...?"
+      },
+      {
+        "text": "'¿Dónde está el baño?' se dice: Where is the bathroom? Repite: Where is the bathroom?",
+        "expectedResponse": "Where is the bathroom?"
+      },
+      {
+        "text": "Muy bien. Ahora: '¿Dónde está la estación?' se dice: Where is the station?",
+        "expectedResponse": "Where is the station?"
+      },
+      {
+        "text": "'¿Dónde está el banco?' se dice: Where is the bank? Repite: Where is the bank?",
+        "expectedResponse": "Where is the bank?"
+      },
+      {
+        "text": "Perfecto. Ahora vamos con respuestas comunes. 'Está a la derecha' se dice: It's on the right. Repite: It's on the right.",
+        "expectedResponse": "It's on the right"
+      },
+      {
+        "text": "'Está a la izquierda' se dice: It's on the left. Repite: It's on the left.",
+        "expectedResponse": "It's on the left"
+      },
+      {
+        "text": "'Está al frente' se dice: It's straight ahead. Repite: It's straight ahead.",
+        "expectedResponse": "It's straight ahead"
+      },
+      {
+        "text": "Si alguien te dice 'Turn left', significa: Gira a la izquierda. Repite: Turn left.",
+        "expectedResponse": "Turn left"
+      },
+      {
+        "text": "'Turn right' significa: Gira a la derecha. Repite: Turn right.",
+        "expectedResponse": "Turn right"
+      },
+      {
+        "text": "'Go straight' significa: Sigue derecho. Repite: Go straight.",
+        "expectedResponse": "Go straight"
+      },
+      {
+        "text": "Muy bien. Ahora escuchemos un diálogo. Persona A: Excuse me, where is the museum? Persona B: Go straight and turn left.",
+        "expectedResponse": "Go straight and turn left"
+      },
+      {
+        "text": "Vamos a practicarlo tú y yo. Yo digo: Excuse me, where is the pharmacy?",
+        "expectedResponse": "Go straight and turn right"
+      },
+      {
+        "text": "Excelente. Una más: Where is the supermarket?",
+        "expectedResponse": "It's on the left"
+      },
+      {
+        "text": "¡Perfecto! Ahora tú intenta hacer la pregunta. Comienza con: Where is...",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Muy bien. Has aprendido a preguntar y entender direcciones básicas en inglés.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima lección para aprender a hablar sobre el clima. ¡Hasta pronto!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

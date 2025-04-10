@@ -1,0 +1,87 @@
+{
+    "title": "Lesson 4.2: Days of the Week",
+    "avatarScript": "Hola. Hoy vamos a aprender los días de la semana en inglés. Esto es esencial para agendar reuniones, planear viajes o simplemente hablar sobre tu rutina. Escucha, repite y practica conmigo. ¡Vamos a comenzar!",
+    "dialog": [
+      {
+        "text": "En inglés, la semana comienza el domingo. Escucha y repite cada día. El primero es: Sunday. Repite: Sunday.",
+        "expectedResponse": "Sunday"
+      },
+      {
+        "text": "Muy bien. El siguiente día es: Monday. Repite: Monday.",
+        "expectedResponse": "Monday"
+      },
+      {
+        "text": "Tuesday es martes. Repite: Tuesday.",
+        "expectedResponse": "Tuesday"
+      },
+      {
+        "text": "El miércoles se dice: Wednesday. Es un poco difícil. Repite: Wednesday.",
+        "expectedResponse": "Wednesday"
+      },
+      {
+        "text": "El jueves es: Thursday. Repite conmigo: Thursday.",
+        "expectedResponse": "Thursday"
+      },
+      {
+        "text": "Viernes se dice: Friday. Repite: Friday.",
+        "expectedResponse": "Friday"
+      },
+      {
+        "text": "Y el último día es: Saturday. Repite: Saturday.",
+        "expectedResponse": "Saturday"
+      },
+      {
+        "text": "Excelente. Ahora repite todos los días conmigo en orden: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday.",
+        "expectedResponse": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+      },
+      {
+        "text": "Muy bien. Ahora haré preguntas y tú responderás. ¿Cómo se dice lunes?",
+        "expectedResponse": "Monday"
+      },
+      {
+        "text": "¿Y viernes?",
+        "expectedResponse": "Friday"
+      },
+      {
+        "text": "¿Cómo se dice miércoles?",
+        "expectedResponse": "Wednesday"
+      },
+      {
+        "text": "¿Y sábado?",
+        "expectedResponse": "Saturday"
+      },
+      {
+        "text": "Perfecto. Ahora vamos a practicar frases comunes. Por ejemplo: 'Hoy es lunes' se dice: Today is Monday. Repite: Today is Monday.",
+        "expectedResponse": "Today is Monday"
+      },
+      {
+        "text": "'Mañana es martes' se dice: Tomorrow is Tuesday. Repite: Tomorrow is Tuesday.",
+        "expectedResponse": "Tomorrow is Tuesday"
+      },
+      {
+        "text": "'Ayer fue domingo' se dice: Yesterday was Sunday. Repite: Yesterday was Sunday.",
+        "expectedResponse": "Yesterday was Sunday"
+      },
+      {
+        "text": "Ahora tú. ¿Cómo dices 'Hoy es viernes'?",
+        "expectedResponse": "Today is Friday"
+      },
+      {
+        "text": "¿Y cómo dices 'Mañana es miércoles'?",
+        "expectedResponse": "Tomorrow is Wednesday"
+      },
+      {
+        "text": "Muy bien. Ahora repite todos los días de la semana una vez más conmigo.",
+        "expectedResponse": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+      },
+      {
+        "text": "¡Excelente trabajo! Saber los días de la semana te ayudará a organizarte mejor y a entender conversaciones cotidianas.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima lección, donde aprenderás a hablar sobre meses y fechas. ¡Hasta pronto!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

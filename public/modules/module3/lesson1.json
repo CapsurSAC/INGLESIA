@@ -1,0 +1,67 @@
+{
+    "title": "Lesson 3.1: Mi familia",
+    "avatarScript": "¡Hola! Bienvenido a una nueva lección. Hoy aprenderás las palabras básicas para hablar sobre tu familia en inglés. Presta atención a la pronunciación y repite cada palabra conmigo. Al final, haremos frases sencillas para practicar.",
+    "dialog": [
+      {
+        "text": "Empecemos con la palabra 'familia'. En inglés se dice: Family. Repite conmigo: Family.",
+        "expectedResponse": "Family"
+      },
+      {
+        "text": "Muy bien. Ahora: 'Padre' se dice: Father. Repite: Father.",
+        "expectedResponse": "Father"
+      },
+      {
+        "text": "Y 'madre' se dice: Mother. Repite conmigo: Mother.",
+        "expectedResponse": "Mother"
+      },
+      {
+        "text": "Perfecto. Ahora aprendamos cómo decir 'hermano'. En inglés es: Brother. Repite: Brother.",
+        "expectedResponse": "Brother"
+      },
+      {
+        "text": "Y 'hermana' se dice: Sister. Repite conmigo: Sister.",
+        "expectedResponse": "Sister"
+      },
+      {
+        "text": "Vamos bien. Ahora: 'Abuelo' se dice: Grandfather. Repite: Grandfather.",
+        "expectedResponse": "Grandfather"
+      },
+      {
+        "text": "Y 'abuela' se dice: Grandmother. Repite conmigo: Grandmother.",
+        "expectedResponse": "Grandmother"
+      },
+      {
+        "text": "Muy bien. Ahora repitamos todo el vocabulario juntos: Family, Father, Mother, Brother, Sister, Grandfather, Grandmother.",
+        "expectedResponse": "Family, Father, Mother, Brother, Sister, Grandfather, Grandmother"
+      },
+      {
+        "text": "Ahora, practiquemos algunas frases. Escucha: My father is very kind. Repite: My father is very kind.",
+        "expectedResponse": "My father is very kind"
+      },
+      {
+        "text": "Otra frase: I have one brother and one sister. Repite conmigo: I have one brother and one sister.",
+        "expectedResponse": "I have one brother and one sister"
+      },
+      {
+        "text": "Escucha esta: My grandmother cooks delicious food. Repite: My grandmother cooks delicious food.",
+        "expectedResponse": "My grandmother cooks delicious food"
+      },
+      {
+        "text": "Ahora tú: ¿Cómo se dice 'mi familia es grande' en inglés? Escucha: My family is big. Repite: My family is big.",
+        "expectedResponse": "My family is big"
+      },
+      {
+        "text": "Excelente. Un último repaso: Family, Father, Mother, Brother, Sister, Grandfather, Grandmother.",
+        "expectedResponse": "Family, Father, Mother, Brother, Sister, Grandfather, Grandmother"
+      },
+      {
+        "text": "¡Muy bien! Ahora puedes hablar de tu familia en inglés. Sigue practicando con tus propias frases.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la siguiente lección. ¡Buen trabajo!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

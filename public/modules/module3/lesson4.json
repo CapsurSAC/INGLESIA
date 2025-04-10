@@ -1,0 +1,67 @@
+{
+    "title": "Lesson 3.4: Talking About the Weather",
+    "avatarScript": "¡Hola! Hoy aprenderás a hablar del clima en inglés. Es un tema común en conversaciones cotidianas y muy útil si viajas. Escucha con atención y repite después de mí.",
+    "dialog": [
+      {
+        "text": "Empecemos con una frase muy común: '¿Cómo está el clima?' En inglés se dice: How's the weather? Repite conmigo: How's the weather?",
+        "expectedResponse": "How's the weather?"
+      },
+      {
+        "text": "Muy bien. Ahora aprendamos algunas respuestas. 'Hace sol' se dice: It's sunny. Repite: It's sunny.",
+        "expectedResponse": "It's sunny"
+      },
+      {
+        "text": "'Está nublado' se dice: It's cloudy. Repite: It's cloudy.",
+        "expectedResponse": "It's cloudy"
+      },
+      {
+        "text": "'Está lloviendo' se dice: It's raining. Repite: It's raining.",
+        "expectedResponse": "It's raining"
+      },
+      {
+        "text": "'Está nevando' se dice: It's snowing. Repite: It's snowing.",
+        "expectedResponse": "It's snowing"
+      },
+      {
+        "text": "'Hace calor' se dice: It's hot. Repite: It's hot.",
+        "expectedResponse": "It's hot"
+      },
+      {
+        "text": "'Hace frío' se dice: It's cold. Repite: It's cold.",
+        "expectedResponse": "It's cold"
+      },
+      {
+        "text": "Ahora, repitamos todas juntas: It's sunny, It's cloudy, It's raining, It's snowing, It's hot, It's cold.",
+        "expectedResponse": "It's sunny, It's cloudy, It's raining, It's snowing, It's hot, It's cold"
+      },
+      {
+        "text": "Vamos a practicar un diálogo. Yo pregunto: How's the weather today? Tú respondes: It's sunny.",
+        "expectedResponse": "It's sunny"
+      },
+      {
+        "text": "Muy bien. Otro ejemplo: How's the weather today? Tú respondes: It's raining.",
+        "expectedResponse": "It's raining"
+      },
+      {
+        "text": "Ahora tú. Pregunta: How's the weather?",
+        "expectedResponse": "How's the weather?"
+      },
+      {
+        "text": "Excelente. Dime ahora cómo está el clima. Usa una de las frases que aprendimos.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Perfecto. Una más: How's the weather in your city?",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Muy bien. Recuerda que hablar del clima es una forma fácil de iniciar una conversación.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima lección para aprender sobre la hora y los días de la semana. ¡Buen trabajo!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

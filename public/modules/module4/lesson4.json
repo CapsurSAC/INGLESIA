@@ -1,0 +1,83 @@
+{
+    "title": "Lesson 4.4: Seasons of the Year",
+    "avatarScript": "¡Hola! En esta lección aprenderás las estaciones del año en inglés: primavera, verano, otoño e invierno. Esto es muy útil para hablar del clima, la ropa que usamos o las actividades que hacemos. ¡Comencemos!",
+    "dialog": [
+      {
+        "text": "La primera estación es la primavera. En inglés se dice: Spring. Repite conmigo: Spring.",
+        "expectedResponse": "Spring"
+      },
+      {
+        "text": "La primavera es cuando las flores crecen. Repite una vez más: Spring.",
+        "expectedResponse": "Spring"
+      },
+      {
+        "text": "La siguiente estación es el verano. En inglés se dice: Summer. Repite: Summer.",
+        "expectedResponse": "Summer"
+      },
+      {
+        "text": "Muy bien. El verano es cuando hace calor y vamos a la playa. Repite otra vez: Summer.",
+        "expectedResponse": "Summer"
+      },
+      {
+        "text": "Ahora vamos con el otoño. En inglés decimos: Fall o Autumn. La más común en Estados Unidos es: Fall. Repite conmigo: Fall.",
+        "expectedResponse": "Fall"
+      },
+      {
+        "text": "En otoño las hojas caen. También puedes decir Autumn. Repite: Autumn.",
+        "expectedResponse": "Autumn"
+      },
+      {
+        "text": "Por último, el invierno. En inglés se dice: Winter. Repite: Winter.",
+        "expectedResponse": "Winter"
+      },
+      {
+        "text": "El invierno es cuando hace frío y cae nieve. Una vez más: Winter.",
+        "expectedResponse": "Winter"
+      },
+      {
+        "text": "¡Muy bien! Ahora repasemos todas las estaciones. Repite conmigo: Spring, Summer, Fall, Winter.",
+        "expectedResponse": "Spring, Summer, Fall, Winter"
+      },
+      {
+        "text": "¿Cómo se dice primavera?",
+        "expectedResponse": "Spring"
+      },
+      {
+        "text": "¿Y cómo se dice invierno?",
+        "expectedResponse": "Winter"
+      },
+      {
+        "text": "Escucha esta frase: En verano hace calor. En inglés se dice: It's hot in summer. Repite: It's hot in summer.",
+        "expectedResponse": "It's hot in summer"
+      },
+      {
+        "text": "Otra frase: En invierno hace frío. En inglés se dice: It's cold in winter. Repite conmigo: It's cold in winter.",
+        "expectedResponse": "It's cold in winter"
+      },
+      {
+        "text": "¿Cómo dices 'En otoño las hojas caen'? En inglés: Leaves fall in autumn. Repite: Leaves fall in autumn.",
+        "expectedResponse": "Leaves fall in autumn"
+      },
+      {
+        "text": "Y si quieres decir 'La primavera es hermosa', en inglés dirías: Spring is beautiful. Repite: Spring is beautiful.",
+        "expectedResponse": "Spring is beautiful"
+      },
+      {
+        "text": "Muy bien. Vamos a hacer un repaso rápido. ¿Listo? Spring, Summer, Fall, Winter.",
+        "expectedResponse": "Spring, Summer, Fall, Winter"
+      },
+      {
+        "text": "¿Puedes decirme el nombre de una estación en inglés?",
+        "expectedResponse": ""
+      },
+      {
+        "text": "¡Excelente! Ya sabes cómo decir las estaciones del año y cómo usarlas en frases.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la siguiente lección. ¡Sigue practicando tu inglés con entusiasmo!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

@@ -1,0 +1,119 @@
+{
+    "title": "Lesson 1: Los números del 1 al 20",
+    "avatarScript": "¡Hola! En esta lección aprenderás los números del 1 al 20 en inglés. Escucha con atención, repite después de mí y practica tu pronunciación.",
+    "dialog": [
+      {
+        "text": "Comencemos. El número 1 en inglés se dice: One. Repite: One.",
+        "expectedResponse": "One"
+      },
+      {
+        "text": "Muy bien. El número 2 se dice: Two. Repite: Two.",
+        "expectedResponse": "Two"
+      },
+      {
+        "text": "Ahora el 3. En inglés se dice: Three. Repite: Three.",
+        "expectedResponse": "Three"
+      },
+      {
+        "text": "Perfecto. Sigamos. El 4 se pronuncia: Four. Repite: Four.",
+        "expectedResponse": "Four"
+      },
+      {
+        "text": "El número 5 se dice: Five. Repite: Five.",
+        "expectedResponse": "Five"
+      },
+      {
+        "text": "Vamos a repasar del 1 al 5: One, Two, Three, Four, Five.",
+        "expectedResponse": "One, Two, Three, Four, Five"
+      },
+      {
+        "text": "Continuamos. El número 6 se dice: Six. Repite: Six.",
+        "expectedResponse": "Six"
+      },
+      {
+        "text": "El número 7 se dice: Seven. Repite: Seven.",
+        "expectedResponse": "Seven"
+      },
+      {
+        "text": "El número 8 se pronuncia: Eight. Repite: Eight.",
+        "expectedResponse": "Eight"
+      },
+      {
+        "text": "El número 9 se dice: Nine. Repite: Nine.",
+        "expectedResponse": "Nine"
+      },
+      {
+        "text": "Y el 10 en inglés es: Ten. Repite: Ten.",
+        "expectedResponse": "Ten"
+      },
+      {
+        "text": "Muy bien. Vamos a decirlos todos del 6 al 10: Six, Seven, Eight, Nine, Ten.",
+        "expectedResponse": "Six, Seven, Eight, Nine, Ten"
+      },
+      {
+        "text": "Ahora vamos con los números del 11 al 15.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Once se dice: Eleven. Repite: Eleven.",
+        "expectedResponse": "Eleven"
+      },
+      {
+        "text": "Doce se dice: Twelve. Repite: Twelve.",
+        "expectedResponse": "Twelve"
+      },
+      {
+        "text": "Trece es: Thirteen. Repite: Thirteen.",
+        "expectedResponse": "Thirteen"
+      },
+      {
+        "text": "Catorce se dice: Fourteen. Repite: Fourteen.",
+        "expectedResponse": "Fourteen"
+      },
+      {
+        "text": "Y quince es: Fifteen. Repite: Fifteen.",
+        "expectedResponse": "Fifteen"
+      },
+      {
+        "text": "Ahora repite todos del 11 al 15: Eleven, Twelve, Thirteen, Fourteen, Fifteen.",
+        "expectedResponse": "Eleven, Twelve, Thirteen, Fourteen, Fifteen"
+      },
+      {
+        "text": "Perfecto. Vamos ahora con los últimos: del 16 al 20.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Dieciséis es: Sixteen. Repite: Sixteen.",
+        "expectedResponse": "Sixteen"
+      },
+      {
+        "text": "Diecisiete se dice: Seventeen. Repite: Seventeen.",
+        "expectedResponse": "Seventeen"
+      },
+      {
+        "text": "Dieciocho es: Eighteen. Repite: Eighteen.",
+        "expectedResponse": "Eighteen"
+      },
+      {
+        "text": "Diecinueve se dice: Nineteen. Repite: Nineteen.",
+        "expectedResponse": "Nineteen"
+      },
+      {
+        "text": "Y veinte es: Twenty. Repite: Twenty.",
+        "expectedResponse": "Twenty"
+      },
+      {
+        "text": "¡Excelente! Ahora repite todos del 16 al 20: Sixteen, Seventeen, Eighteen, Nineteen, Twenty.",
+        "expectedResponse": "Sixteen, Seventeen, Eighteen, Nineteen, Twenty"
+      },
+      {
+        "text": "Muy bien. Ahora repitamos todos del 1 al 20 juntos. ¿Listo? One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty.",
+        "expectedResponse": "One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty"
+      },
+      {
+        "text": "¡Muy buen trabajo! Has aprendido a contar del 1 al 20 en inglés. Nos vemos en la próxima lección.",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

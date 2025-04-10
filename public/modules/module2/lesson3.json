@@ -1,0 +1,107 @@
+{
+    "title": "Lesson 2.3: Los días de la semana",
+    "avatarScript": "¡Bienvenido a una nueva clase! Hoy vamos a aprender los días de la semana en inglés. Este conocimiento te ayudará a hablar sobre tus actividades, tu horario y tu rutina. Escucha con atención, repite conmigo y practica mucho.",
+    "dialog": [
+      {
+        "text": "Empecemos con el primer día: Monday. En inglés se pronuncia: Mán-dei. Repite conmigo: Monday.",
+        "expectedResponse": "Monday"
+      },
+      {
+        "text": "Muy bien. Otra vez: Monday.",
+        "expectedResponse": "Monday"
+      },
+      {
+        "text": "Ahora, el segundo día es Tuesday. Se pronuncia: Tiús-dei. Repite: Tuesday.",
+        "expectedResponse": "Tuesday"
+      },
+      {
+        "text": "Excelente. Una vez más: Tuesday.",
+        "expectedResponse": "Tuesday"
+      },
+      {
+        "text": "Seguimos con Wednesday. Se pronuncia: Güéns-dei. Repite conmigo: Wednesday.",
+        "expectedResponse": "Wednesday"
+      },
+      {
+        "text": "Muy bien. De nuevo: Wednesday.",
+        "expectedResponse": "Wednesday"
+      },
+      {
+        "text": "El cuarto día es Thursday. Se pronuncia: Térs-dei. Repite: Thursday.",
+        "expectedResponse": "Thursday"
+      },
+      {
+        "text": "Una vez más: Thursday.",
+        "expectedResponse": "Thursday"
+      },
+      {
+        "text": "Ahora vamos con Friday. Se pronuncia: Frái-dei. Repite: Friday.",
+        "expectedResponse": "Friday"
+      },
+      {
+        "text": "Excelente. Repite de nuevo: Friday.",
+        "expectedResponse": "Friday"
+      },
+      {
+        "text": "Pasamos al fin de semana. Saturday se pronuncia: Sá-tur-dei. Repite: Saturday.",
+        "expectedResponse": "Saturday"
+      },
+      {
+        "text": "Una vez más: Saturday.",
+        "expectedResponse": "Saturday"
+      },
+      {
+        "text": "Y por último, Sunday. Se pronuncia: Sán-dei. Repite: Sunday.",
+        "expectedResponse": "Sunday"
+      },
+      {
+        "text": "Muy bien. De nuevo: Sunday.",
+        "expectedResponse": "Sunday"
+      },
+      {
+        "text": "Ahora vamos a decirlos todos en orden. Repite conmigo: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+        "expectedResponse": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+      },
+      {
+        "text": "Una vez más, pero más despacio: Monday... Tuesday... Wednesday... Thursday... Friday... Saturday... Sunday.",
+        "expectedResponse": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+      },
+      {
+        "text": "¡Excelente! Ahora hagamos unas oraciones. Escucha: I go to school on Monday. Repite: I go to school on Monday.",
+        "expectedResponse": "I go to school on Monday"
+      },
+      {
+        "text": "Muy bien. Ahora: I study English on Tuesday. Repite: I study English on Tuesday.",
+        "expectedResponse": "I study English on Tuesday"
+      },
+      {
+        "text": "Escucha otra: I have music class on Wednesday. Repite: I have music class on Wednesday.",
+        "expectedResponse": "I have music class on Wednesday"
+      },
+      {
+        "text": "Excelente. Escucha esta: I play soccer on Saturday. Repite: I play soccer on Saturday.",
+        "expectedResponse": "I play soccer on Saturday"
+      },
+      {
+        "text": "Última oración: I rest on Sunday. Repite: I rest on Sunday.",
+        "expectedResponse": "I rest on Sunday"
+      },
+      {
+        "text": "Ahora tú: ¿Qué haces los viernes? Puedes responder: I watch movies on Friday.",
+        "expectedResponse": "I watch movies on Friday"
+      },
+      {
+        "text": "Perfecto. ¿Y qué haces los domingos? Intenta decirlo tú. Ejemplo: I go to the park on Sunday.",
+        "expectedResponse": "I go to the park on Sunday"
+      },
+      {
+        "text": "¡Muy bien! Has aprendido los días de la semana y cómo usarlos en frases. No olvides practicar diciendo qué haces cada día.",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la próxima clase. ¡Sigue aprendiendo con entusiasmo!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

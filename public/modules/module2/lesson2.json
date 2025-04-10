@@ -1,0 +1,79 @@
+{
+    "title": "Lesson 2: ¿Cuántos tienes? (How many...?)",
+    "avatarScript": "¡Hola! En esta clase aprenderás a preguntar cuántos objetos o personas hay usando la expresión 'How many...?' en inglés. También aprenderás a responder usando números y sustantivos contables. Vamos a practicar juntos.",
+    "dialog": [
+      {
+        "text": "Comencemos con la frase 'How many'. Esto significa '¿Cuántos?' en inglés. Repite conmigo: How many.",
+        "expectedResponse": "How many"
+      },
+      {
+        "text": "Excelente. Ahora escuchemos una oración completa: How many books do you have? Repite: How many books do you have?",
+        "expectedResponse": "How many books do you have?"
+      },
+      {
+        "text": "Muy bien. Ahora responde: I have three books. Repite: I have three books.",
+        "expectedResponse": "I have three books"
+      },
+      {
+        "text": "Practiquemos con otro objeto. Escucha: How many pens do you have?",
+        "expectedResponse": "How many pens do you have?"
+      },
+      {
+        "text": "Responde: I have five pens.",
+        "expectedResponse": "I have five pens"
+      },
+      {
+        "text": "Perfecto. Ahora cambiaremos de sustantivo. Escucha: How many brothers do you have?",
+        "expectedResponse": "How many brothers do you have?"
+      },
+      {
+        "text": "Responde: I have two brothers.",
+        "expectedResponse": "I have two brothers"
+      },
+      {
+        "text": "Muy bien. Cambiamos de nuevo. How many apples do you have?",
+        "expectedResponse": "How many apples do you have?"
+      },
+      {
+        "text": "Responde: I have four apples.",
+        "expectedResponse": "I have four apples"
+      },
+      {
+        "text": "Revisemos lo que hemos aprendido. Repite después de mí: How many books do you have?",
+        "expectedResponse": "How many books do you have?"
+      },
+      {
+        "text": "I have three books.",
+        "expectedResponse": "I have three books"
+      },
+      {
+        "text": "How many pens do you have?",
+        "expectedResponse": "How many pens do you have?"
+      },
+      {
+        "text": "I have five pens.",
+        "expectedResponse": "I have five pens"
+      },
+      {
+        "text": "How many brothers do you have?",
+        "expectedResponse": "How many brothers do you have?"
+      },
+      {
+        "text": "I have two brothers.",
+        "expectedResponse": "I have two brothers"
+      },
+      {
+        "text": "How many apples do you have?",
+        "expectedResponse": "How many apples do you have?"
+      },
+      {
+        "text": "I have four apples.",
+        "expectedResponse": "I have four apples"
+      },
+      {
+        "text": "¡Fantástico! Ya sabes cómo preguntar y responder cuántos objetos o personas tienes usando 'How many'. Sigue practicando y nos vemos en la siguiente lección.",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

@@ -1,0 +1,75 @@
+{
+    "title": "Lesson 1.4: Saying Goodbye",
+    "avatarScript": "¡Hola! En esta lección aprenderás a despedirte en inglés. Usarás estas frases cuando termines una conversación o te vayas de algún lugar. Te enseñaré las expresiones más comunes y cómo usarlas. ¡Vamos a comenzar!",
+    "dialog": [
+      {
+        "text": "La forma más común de despedirse es decir: Goodbye. Repite conmigo: Goodbye.",
+        "expectedResponse": "Goodbye"
+      },
+      {
+        "text": "Muy bien. Escucha otra vez: Goodbye. Ahora tú.",
+        "expectedResponse": "Goodbye"
+      },
+      {
+        "text": "Otra forma informal y muy usada es: Bye. Es más corta. Repite: Bye.",
+        "expectedResponse": "Bye"
+      },
+      {
+        "text": "Perfecto. Ahora repite ambas: Goodbye. Bye.",
+        "expectedResponse": "Goodbye. Bye"
+      },
+      {
+        "text": "Cuando vas a ver a alguien más tarde puedes decir: See you later. Repite: See you later.",
+        "expectedResponse": "See you later"
+      },
+      {
+        "text": "Otra forma muy común y casual es: See you soon. Repite: See you soon.",
+        "expectedResponse": "See you soon"
+      },
+      {
+        "text": "También puedes decir simplemente: See you. Repite conmigo: See you.",
+        "expectedResponse": "See you"
+      },
+      {
+        "text": "Ahora juntamos esas tres: See you, See you later, See you soon.",
+        "expectedResponse": "See you, See you later, See you soon"
+      },
+      {
+        "text": "Cuando alguien te desea un buen día, puedes responder con: Have a nice day. Repite: Have a nice day.",
+        "expectedResponse": "Have a nice day"
+      },
+      {
+        "text": "Otra variación es: Have a good night, si es de noche. Repite: Have a good night.",
+        "expectedResponse": "Have a good night"
+      },
+      {
+        "text": "¿Listo para una pequeña práctica? Yo digo: Bye! Tú respondes lo mismo. Bye!",
+        "expectedResponse": "Bye"
+      },
+      {
+        "text": "Ahora yo digo: See you later. Tú respondes: See you later.",
+        "expectedResponse": "See you later"
+      },
+      {
+        "text": "Muy bien. Ahora tú me dices: Have a nice day.",
+        "expectedResponse": "Have a nice day"
+      },
+      {
+        "text": "¡Excelente! Vamos a repasar las principales frases de hoy:",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Goodbye, Bye, See you, See you later, See you soon, Have a nice day, Have a good night.",
+        "expectedResponse": "Goodbye, Bye, See you, See you later, See you soon, Have a nice day, Have a good night"
+      },
+      {
+        "text": "Y ahora, para cerrar esta clase... yo te diré: Goodbye! Y tú responderás también: Goodbye!",
+        "expectedResponse": "Goodbye"
+      },
+      {
+        "text": "¡Muy buen trabajo! Aprendiste cómo despedirte correctamente en inglés en varias situaciones. Sigue practicando y nos vemos en la próxima clase.",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  

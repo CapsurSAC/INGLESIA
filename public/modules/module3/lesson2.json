@@ -1,0 +1,63 @@
+{
+    "title": "Lesson 3.2: Describiendo a mi familia",
+    "avatarScript": "¡Hola! En esta lección aprenderás adjetivos simples en inglés para describir a los miembros de tu familia. Estos te ayudarán a hablar de cómo son tus seres queridos. Escucha atentamente y repite conmigo.",
+    "dialog": [
+      {
+        "text": "Empezamos con el adjetivo 'amable'. En inglés se dice: Kind. Repite conmigo: Kind.",
+        "expectedResponse": "Kind"
+      },
+      {
+        "text": "'Divertido' se dice: Funny. Repite: Funny.",
+        "expectedResponse": "Funny"
+      },
+      {
+        "text": "'Trabajador' se dice: Hardworking. Repite: Hardworking.",
+        "expectedResponse": "Hardworking"
+      },
+      {
+        "text": "'Inteligente' se dice: Smart. Repite: Smart.",
+        "expectedResponse": "Smart"
+      },
+      {
+        "text": "'Paciente' se dice: Patient. Repite: Patient.",
+        "expectedResponse": "Patient"
+      },
+      {
+        "text": "Muy bien. Ahora repitamos todos juntos: Kind, Funny, Hardworking, Smart, Patient.",
+        "expectedResponse": "Kind, Funny, Hardworking, Smart, Patient"
+      },
+      {
+        "text": "Practiquemos frases. Escucha: My mother is very kind. Repite: My mother is very kind.",
+        "expectedResponse": "My mother is very kind"
+      },
+      {
+        "text": "Otra frase: My sister is funny. Repite conmigo: My sister is funny.",
+        "expectedResponse": "My sister is funny"
+      },
+      {
+        "text": "Escucha esta: My father is hardworking. Repite: My father is hardworking.",
+        "expectedResponse": "My father is hardworking"
+      },
+      {
+        "text": "Ahora una más: My brother is smart and patient. Repite conmigo: My brother is smart and patient.",
+        "expectedResponse": "My brother is smart and patient"
+      },
+      {
+        "text": "¡Excelente! Ahora tú. ¿Cómo dirías 'Mi abuela es amable'? Escucha: My grandmother is kind. Repite: My grandmother is kind.",
+        "expectedResponse": "My grandmother is kind"
+      },
+      {
+        "text": "Muy bien. Último repaso: Kind, Funny, Hardworking, Smart, Patient.",
+        "expectedResponse": "Kind, Funny, Hardworking, Smart, Patient"
+      },
+      {
+        "text": "Has aprendido a describir a tu familia en inglés. ¡Eso es muy útil en una conversación!",
+        "expectedResponse": ""
+      },
+      {
+        "text": "Nos vemos en la siguiente lección. ¡Sigue practicando!",
+        "expectedResponse": ""
+      }
+    ]
+  }
+  
