@@ -61,21 +61,23 @@ export default function Lesson1VoiceOnly() {
     avatar.current.on(StreamingEvents.USER_STOP, async (e: any) => {
       setIsUserTalking(false);
       if (!awaitingResponse || isPaused) return;
-
+    
       const transcript = e.detail.transcript?.toLowerCase() || "";
-
-      // 🔒 Validar si la pregunta es de inglés
+    
+      // ✅ Tema relacionado con la clase de inglés
       if (isEnglishRelated(transcript)) {
         await avatar.current?.speak({
-          text: `Buena pregunta. ${transcript}. Ahora volvamos a nuestra clase.`,
+          text: `Buena pregunta. "${transcript}". Ahora volvamos a nuestra clase.`,
           taskType: TaskType.TALK,
           taskMode: TaskMode.ASYNC,
         });
+    
         setChatHistory((prev) => [
           ...prev,
           { from: "user", message: transcript },
-          { from: "avatar", message: `Buena pregunta. ${transcript}. Ahora volvamos a nuestra clase.` },
+          { from: "avatar", message: `Buena pregunta. "${transcript}". Ahora volvamos a nuestra clase.` },
         ]);
+    
         setAwaitingResponse(false);
         setTimeout(() => {
           setCurrentStep((prev) => prev + 1);
@@ -83,31 +85,24 @@ export default function Lesson1VoiceOnly() {
         }, 1000);
         return;
       }
-
-      // ❌ Tema fuera de contexto
+    
+      // ❌ Tema fuera de contexto (no se avanza)
       await avatar.current?.speak({
-        text: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Vamos a continuar.",
+        text: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
         taskType: TaskType.TALK,
         taskMode: TaskMode.ASYNC,
       });
-
+    
       setChatHistory((prev) => [
         ...prev,
         { from: "user", message: transcript },
         {
           from: "avatar",
-          message:
-            "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Vamos a continuar.",
+          message: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
         },
       ]);
-
-      setAwaitingResponse(false);
-      setTimeout(() => {
-        setCurrentStep((prev) => prev + 1);
-        speakNextStep();
-      }, 1000);
     });
-
+    
     await avatar.current.createStartAvatar({
       quality: AvatarQuality.Medium,
       avatarName: "June_HR_public",
@@ -236,6 +231,47 @@ export default function Lesson1VoiceOnly() {
             <Button color="default" onClick={speakNextStep}>
               <span role="img" aria-label="repetir">🔁</span> Repetir instrucción
             </Button>
+            <Button
+              color="primary"
+              onClick={async () => {
+                const userInput = prompt("Escribe tu mensaje para el docente:");
+                if (!userInput || !avatar.current) return;
+
+                const lowerInput = userInput.toLowerCase();
+
+                if (!isEnglishRelated(lowerInput)) {
+                  const warning =
+                    "Lo siento, solo puedo responder preguntas relacionadas con la clase de inglés.";
+                  await avatar.current.speak({
+                    text: warning,
+                    taskType: TaskType.TALK,
+                    taskMode: TaskMode.ASYNC,
+                  });
+                  setChatHistory((prev) => [
+                    ...prev,
+                    { from: "user", message: userInput },
+                    { from: "avatar", message: warning },
+                  ]);
+                  return;
+                }
+
+                // Si es válido, responde y continúa
+                await avatar.current.speak({
+                  text: userInput,
+                  taskType: TaskType.TALK,
+                  taskMode: TaskMode.ASYNC,
+                });
+                setChatHistory((prev) => [
+                  ...prev,
+                  { from: "user", message: userInput },
+                  { from: "avatar", message: userInput },
+                ]);
+              }}
+            >
+              <span role="img" aria-label="chat">💬</span> Escribir por chat
+            </Button>
+
+
             <Button color="danger" onClick={endLesson}>
               <span role="img" aria-label="fin">🔚</span> Finalizar clase
             </Button>
