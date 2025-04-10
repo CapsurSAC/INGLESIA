@@ -40,7 +40,7 @@ export default function HomePage() {
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Bienvenido a NextInglés</h1>
         <p className="text-white/80 mb-10 text-lg">
-          Aprende inglés básico desde cero con lecciones interactivas guiadas por avatares. Selecciona un módulo para comenzar.
+          Aprende inglés básico desde cero con lecciones interactivas guiadas. Selecciona un módulo para comenzar.
         </p>
       </div>
 

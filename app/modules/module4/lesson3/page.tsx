@@ -1,7 +1,10 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { Spinner, Button } from "@nextui-org/react";
+import { isEnglishRelated } from "@/app/utils/isEnglishRelated";
+
 import StreamingAvatar, {
   AvatarQuality,
   StreamingEvents,
@@ -55,22 +58,52 @@ export default function Lesson1VoiceOnly() {
 
     avatar.current.on(StreamingEvents.STREAM_READY, (e) => setStream(e.detail));
     avatar.current.on(StreamingEvents.USER_START, () => setIsUserTalking(true));
-    avatar.current.on(StreamingEvents.USER_STOP, () => {
-      setIsUserTalking(false);
-      if (awaitingResponse && !isPaused) {
-        const userMessage = lesson?.dialog[currentStep]?.expectedResponse;
-        if (userMessage) {
-          setChatHistory((prev) => [
-            ...prev,
-            { from: "user", message: userMessage },
-          ]);
-        }
-        setCurrentStep((prev) => prev + 1);
-        setAwaitingResponse(false);
-        speakNextStep();
-      }
-    });
 
+    avatar.current.on(StreamingEvents.USER_STOP, async (e: any) => {
+      setIsUserTalking(false);
+      if (!awaitingResponse || isPaused) return;
+    
+      const transcript = e.detail.transcript?.toLowerCase() || "";
+    
+      // ✅ Tema relacionado con la clase de inglés
+      if (isEnglishRelated(transcript)) {
+        await avatar.current?.speak({
+          text: `Buena pregunta. "${transcript}". Ahora volvamos a nuestra clase.`,
+          taskType: TaskType.TALK,
+          taskMode: TaskMode.ASYNC,
+        });
+    
+        setChatHistory((prev) => [
+          ...prev,
+          { from: "user", message: transcript },
+          { from: "avatar", message: `Buena pregunta. "${transcript}". Ahora volvamos a nuestra clase.` },
+        ]);
+    
+        setAwaitingResponse(false);
+        setTimeout(() => {
+          setCurrentStep((prev) => prev + 1);
+          speakNextStep();
+        }, 1000);
+        return;
+      }
+    
+      // ❌ Tema fuera de contexto (no se avanza)
+      await avatar.current?.speak({
+        text: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
+        taskType: TaskType.TALK,
+        taskMode: TaskMode.ASYNC,
+      });
+    
+      setChatHistory((prev) => [
+        ...prev,
+        { from: "user", message: transcript },
+        {
+          from: "avatar",
+          message: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
+        },
+      ]);
+    });
+    
     await avatar.current.createStartAvatar({
       quality: AvatarQuality.Medium,
       avatarName: "June_HR_public",
@@ -142,17 +175,7 @@ export default function Lesson1VoiceOnly() {
   async function handleResume() {
     if (!avatar.current || !lesson) return;
     setIsPaused(false);
-    const step = lesson.dialog[currentStep];
-    if (!step) return;
-
-    await avatar.current.speak({
-      text: step.text,
-      taskType: TaskType.TALK,
-      taskMode: TaskMode.ASYNC,
-    });
-
-    setAwaitingResponse(true);
-    avatar.current.startListening();
+    speakNextStep();
   }
 
   if (!lesson) return <Spinner label="Iniciando..." />;
@@ -200,41 +223,55 @@ export default function Lesson1VoiceOnly() {
           )}
 
           <div className="flex gap-4 flex-wrap justify-center mt-4">
-            <Button
-              color="secondary"
-              onClick={handlePause}
-              isDisabled={isPaused}
-            >
+            <Button color="secondary" onClick={handlePause} isDisabled={isPaused}>
               <span role="img" aria-label="pausa">⏸️</span> Pausar voz
             </Button>
-
-            <Button
-              color="success"
-              onClick={handleResume}
-              isDisabled={!isPaused}
-            >
+            <Button color="success" onClick={handleResume} isDisabled={!isPaused}>
               <span role="img" aria-label="reanudar">▶️</span> Reanudar
             </Button>
-
             <Button color="default" onClick={speakNextStep}>
               <span role="img" aria-label="repetir">🔁</span> Repetir instrucción
             </Button>
-
             <Button
               color="primary"
               onClick={async () => {
                 const userInput = prompt("Escribe tu mensaje para el docente:");
-                if (userInput && avatar.current) {
+                if (!userInput || !avatar.current) return;
+
+                const lowerInput = userInput.toLowerCase();
+
+                if (!isEnglishRelated(lowerInput)) {
+                  const warning =
+                    "Lo siento, solo puedo responder preguntas relacionadas con la clase de inglés.";
                   await avatar.current.speak({
-                    text: userInput,
+                    text: warning,
                     taskType: TaskType.TALK,
                     taskMode: TaskMode.ASYNC,
                   });
+                  setChatHistory((prev) => [
+                    ...prev,
+                    { from: "user", message: userInput },
+                    { from: "avatar", message: warning },
+                  ]);
+                  return;
                 }
+
+                // Si es válido, responde y continúa
+                await avatar.current.speak({
+                  text: userInput,
+                  taskType: TaskType.TALK,
+                  taskMode: TaskMode.ASYNC,
+                });
+                setChatHistory((prev) => [
+                  ...prev,
+                  { from: "user", message: userInput },
+                  { from: "avatar", message: userInput },
+                ]);
               }}
             >
               <span role="img" aria-label="chat">💬</span> Escribir por chat
             </Button>
+
 
             <Button color="danger" onClick={endLesson}>
               <span role="img" aria-label="fin">🔚</span> Finalizar clase
@@ -288,11 +325,7 @@ export default function Lesson1VoiceOnly() {
           </Button>
         </div>
       ) : (
-        <Button
-          isLoading={isSessionLoading}
-          onClick={startLesson}
-          color="primary"
-        >
+        <Button isLoading={isSessionLoading} onClick={startLesson} color="primary">
           Iniciar clase
         </Button>
       )}
