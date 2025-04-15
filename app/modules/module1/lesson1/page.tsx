@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Spinner, Button } from "@nextui-org/react";
 import { isEnglishRelated } from "@/app/utils/isEnglishRelated";
+import { useSearchParams } from "next/navigation";
 
 import StreamingAvatar, {
   AvatarQuality,
@@ -11,6 +12,7 @@ import StreamingAvatar, {
   TaskType,
   TaskMode,
 } from "@heygen/streaming-avatar";
+
 
 interface LessonStep {
   text: string;
@@ -24,6 +26,9 @@ interface LessonData {
 }
 
 export default function Lesson1VoiceOnly() {
+  const searchParams = useSearchParams(); // ✅ Aquí está bien
+  const userId = searchParams.get("user_id"); // ✅
+  console.log("👤 ID de usuario recibido:", userId);
   const [lesson, setLesson] = useState<LessonData | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [isSessionLoading, setIsSessionLoading] = useState(false);
@@ -64,7 +69,6 @@ export default function Lesson1VoiceOnly() {
     
       const transcript = e.detail.transcript?.toLowerCase() || "";
     
-      // ✅ Tema relacionado con la clase de inglés
       if (isEnglishRelated(transcript)) {
         await avatar.current?.speak({
           text: `Buena pregunta. "${transcript}". Ahora volvamos a nuestra clase.`,
@@ -81,12 +85,12 @@ export default function Lesson1VoiceOnly() {
         setAwaitingResponse(false);
         setTimeout(() => {
           setCurrentStep((prev) => prev + 1);
-          speakNextStep();
+          speakNextStep(); // ✅ aquí llamas a la función global
         }, 1000);
         return;
       }
     
-      // ❌ Tema fuera de contexto (no se avanza)
+      // ❌ Pregunta fuera de tema
       await avatar.current?.speak({
         text: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
         taskType: TaskType.TALK,
@@ -101,8 +105,56 @@ export default function Lesson1VoiceOnly() {
           message: "Lo siento, solo puedo responder temas relacionados con la clase de inglés. Por favor, continuemos con la lección.",
         },
       ]);
+    
+      setAwaitingResponse(false);
+      setTimeout(() => {
+        setCurrentStep((prev) => prev + 1);
+        speakNextStep(); // ✅ continua con la clase
+      }, 1000);
     });
     
+    async function speakNextStep() {
+      const step = lesson?.dialog[currentStep];
+      if (!step || !avatar.current) return;
+    
+      setCurrentText(step.text);
+      setChatHistory((prev) => [...prev, { from: "avatar", message: step.text }]);
+    
+      await avatar.current.speak({
+        text: step.text,
+        taskType: TaskType.TALK,
+        taskMode: TaskMode.ASYNC,
+      });
+    
+      // Guardar mensaje del avatar
+      await fetch("/api/save-chat", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: userId,
+          lesson_id: "module1_lesson1",
+          message: step.text,
+          sender: "avatar",
+          
+        }),
+      });
+    
+      // Guardar progreso de lección
+      await fetch("/api/save-progress", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: userId,
+          lesson_id: "module1_lesson1",
+          step_number: currentStep,
+          completed: currentStep >= (lesson?.dialog.length - 1),
+        }),
+      });
+    
+      setAwaitingResponse(true);
+      avatar.current.startListening();
+    }
+    
+    
+
     await avatar.current.createStartAvatar({
       quality: AvatarQuality.Medium,
       avatarName: "June_HR_public",
@@ -149,12 +201,33 @@ export default function Lesson1VoiceOnly() {
 
   useEffect(() => {
     async function loadLesson() {
+      // 1. Cargar la lección como siempre
       const res = await fetch("/modules/module1/lesson1.json");
       const data = await res.json();
       setLesson(data);
+  
+      // 2. Consultar progreso del usuario
+      const progressRes = await fetch("/api/get-progress", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: userId, // 🧠 ← reemplaza con el ID real del usuario logueado
+          lesson_id: "module1_lesson1",
+        }),
+      });
+  
+      const progress = await progressRes.json();
+      console.log("📦 Progreso recuperado:", progress);
+  
+      // 3. Cargar step y estado
+      setCurrentStep(progress.step_number || 0);
+      if (progress.completed) {
+        setSessionEnded(true); // Muestra que ya finalizó
+      }
     }
+  
     loadLesson();
   }, []);
+  
 
   useEffect(() => {
     if (videoRef.current && stream) {
@@ -323,11 +396,36 @@ export default function Lesson1VoiceOnly() {
             <span role="img" aria-label="reiniciar">🔁</span> Volver a empezar
           </Button>
         </div>
+      ) : sessionEnded ? (
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-lg text-gray-500 mt-4">
+            <span role="img" aria-label="fin clase">🔚</span> Ya habías completado esta clase.
+          </p>
+          <Button
+            color="primary"
+            onClick={() => {
+              setCurrentStep(0);
+              setSessionEnded(false);
+              setIsUserTalking(false);
+              setAwaitingResponse(false);
+              setStream(undefined);
+              setChatHistory([]); // 🧼 Limpiar historial
+              if (videoRef.current) {
+                videoRef.current.pause();
+                videoRef.current.srcObject = null;
+              }
+              startLesson();
+            }}
+          >
+            <span role="img" aria-label="reiniciar">🔁</span> Volver a empezar
+          </Button>
+        </div>
       ) : (
         <Button isLoading={isSessionLoading} onClick={startLesson} color="primary">
           Iniciar clase
         </Button>
       )}
+      
     </div>
   );
 }

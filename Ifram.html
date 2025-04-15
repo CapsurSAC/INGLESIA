@@ -1,0 +1,34 @@
+<?php
+  $user_id = $_SESSION['user_id']; // ID del usuario en Chamilo
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Redirecci&oacute;n al contenido interactivo</title>
+	
+  <style type="text/css">body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    .fallback {
+      padding: 20px;
+    }
+	</style>
+</head>
+<body>
+<p><iframe allow="microphone; camera" src="https://inglesia.vercel.app/?user_id=<?php echo $user_id; ?>" title="Contenido Interactivo"></iframe>
+</p>
+</body>
+</html>

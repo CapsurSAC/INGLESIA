@@ -1,93 +1,98 @@
 {
   "title": "Lesson 1: Greetings & Introductions",
-  "avatarScript": "¡Hola y bienvenido a tu primera clase de inglés! Hoy aprenderás a saludar, presentarte y empezar una conversación sencilla. Repite después de mí, practica con seguridad y prepárate para divertirte.",
+  "avatarScript": "¡Hola! Bienvenido a tu primera clase de inglés. Me alegra mucho acompañarte en este viaje. Hoy aprenderemos a saludar, a decir nuestro nombre y a comenzar una conversación sencilla. No te preocupes si te equivocas, lo importante es practicar. ¿Estás listo? ¡Vamos allá!",
   "dialog": [
+
     {
-      "text": "Empecemos por lo más importante: saludar. En inglés, 'Hola' se dice: Hello. Repite conmigo: Hello.",
+      "text": "Comenzamos con los saludos básicos. En inglés, para decir 'Hola', usamos la palabra: Hello. Escucha cómo suena: Hello. Ahora tú, repite conmigo: Hello.",
       "expectedResponse": "Hello"
     },
     {
-      "text": "Muy bien. Ahora, escúchalo de nuevo: Hello. Inténtalo otra vez: Hello.",
+      "text": "Muy bien. Una vez más, con confianza: Hello.",
       "expectedResponse": "Hello"
     },
     {
-      "text": "¿Y si quieres ser más formal por la mañana? Puedes decir: Good morning. Repite: Good morning.",
+      "text": "Si estás saludando por la mañana, puedes decir: Good morning. Intenta repetirlo: Good morning.",
       "expectedResponse": "Good morning"
     },
     {
-      "text": "Ahora por la tarde: Good afternoon. Inténtalo tú: Good afternoon.",
+      "text": "¿Y por la tarde? Decimos: Good afternoon. Repite conmigo: Good afternoon.",
       "expectedResponse": "Good afternoon"
     },
     {
-      "text": "Y por la noche, decimos: Good evening. Repite: Good evening.",
+      "text": "Por la noche, usamos: Good evening. Una vez más: Good evening.",
       "expectedResponse": "Good evening"
     },
+
     {
-      "text": "Muy bien. Ahora pasemos a las presentaciones. Para decir 'Mi nombre es...', decimos: My name is... Repite: My name is.",
+      "text": "Muy bien. Ahora vamos a aprender cómo presentarnos. Para decir 'Mi nombre es', en inglés decimos: My name is... Repítelo conmigo: My name is.",
       "expectedResponse": "My name is"
     },
     {
-      "text": "Agrega tu nombre. Por ejemplo: My name is Laura. Inténtalo tú: My name is Laura.",
+      "text": "Perfecto. Ahora agrega tu nombre. Por ejemplo, si te llamas Laura: My name is Laura. Intenta repetirlo: My name is Laura.",
       "expectedResponse": "My name is Laura"
     },
     {
-      "text": "¡Excelente! Ahora, escúchame decir: Hello, my name is Laura.",
+      "text": "Muy bien. Ahora escucha cómo suena en una frase completa: Hello, my name is Laura.",
       "expectedResponse": "Hello, my name is Laura"
     },
     {
-      "text": "Intenta repetir toda la frase tú: Hello, my name is Laura.",
+      "text": "Tu turno. Repite toda la frase: Hello, my name is Laura.",
       "expectedResponse": "Hello, my name is Laura"
     },
     {
-      "text": "Ahora vamos a practicar un pequeño diálogo. Yo diré: Hello! Y tú respondes lo mismo: Hello!",
+      "text": "Ahora vamos a practicar un pequeño diálogo. Yo digo: Hello! Y tú respondes: Hello!",
       "expectedResponse": "Hello"
     },
     {
-      "text": "Ahora yo digo: My name is John. ¿Cómo respondes tú con tu nombre?",
+      "text": "Muy bien. Ahora yo digo: My name is John. ¿Cómo responderías tú usando tu nombre?",
       "expectedResponse": "My name is Laura"
     },
     {
-      "text": "Muy bien. También puedes decir: I am Laura. Repite: I am Laura.",
+      "text": "¡Excelente! También puedes decirlo de forma más corta: I am Laura. Repítelo: I am Laura.",
       "expectedResponse": "I am Laura"
     },
     {
-      "text": "Otra forma de responder es: I’m Laura. Es una forma corta de 'I am'. Repite: I’m Laura.",
+      "text": "Y si quieres sonar aún más natural, puedes usar la contracción: I’m Laura. Repite: I’m Laura.",
       "expectedResponse": "I’m Laura"
     },
+
     {
-      "text": "¿Cómo se dice 'Mucho gusto'? Se dice: Nice to meet you. Repite: Nice to meet you.",
+      "text": "Para decir 'Mucho gusto', en inglés usamos: Nice to meet you. Es una frase muy útil. Repite: Nice to meet you.",
       "expectedResponse": "Nice to meet you"
     },
     {
-      "text": "Ahora la frase completa: Hello, I’m Laura. Nice to meet you.",
+      "text": "Ahora construyamos una frase completa. Por ejemplo: Hello, I’m Laura. Nice to meet you.",
       "expectedResponse": "Hello, I’m Laura. Nice to meet you"
     },
+
     {
-      "text": "Muy bien. Ahora repite el diálogo completo tú solo. Primero: Hello!",
+      "text": "Vamos a repasar todo el diálogo paso a paso. Primero: Hello!",
       "expectedResponse": "Hello"
     },
     {
-      "text": "Después: My name is Laura.",
+      "text": "Luego: My name is Laura.",
       "expectedResponse": "My name is Laura"
     },
     {
-      "text": "Y al final: Nice to meet you.",
+      "text": "Y por último: Nice to meet you.",
       "expectedResponse": "Nice to meet you"
     },
     {
-      "text": "¡Excelente! Ahora cambiamos roles. Tú me dices: Hello!",
+      "text": "¡Ahora cambiamos los roles! Tú empiezas. Dime: Hello!",
       "expectedResponse": "Hello"
     },
     {
-      "text": "Luego me dices tu nombre: My name is Laura.",
+      "text": "Ahora preséntate: My name is Laura.",
       "expectedResponse": "My name is Laura"
     },
     {
-      "text": "Y terminas con: Nice to meet you.",
+      "text": "Y termina con: Nice to meet you.",
       "expectedResponse": "Nice to meet you"
     },
+
     {
-      "text": "¡Lo hiciste genial! Ahora puedes saludar, presentarte y comenzar una conversación simple en inglés. ¡Nos vemos en la próxima lección!",
+      "text": "¡Lo has hecho genial! Has aprendido a saludar, presentarte y comenzar una conversación sencilla en inglés. Recuerda que la práctica hace al maestro. ¡Nos vemos en la próxima lección!",
       "expectedResponse": ""
     }
   ]
